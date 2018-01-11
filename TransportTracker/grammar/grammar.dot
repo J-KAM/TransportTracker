@@ -1,0 +1,62 @@
+
+    digraph xtext {
+    fontname = "Bitstream Vera Sans"
+    fontsize = 8
+    node[
+        shape=record,
+        style=filled,
+        fillcolor=aliceblue
+    ]
+    nodesep = 0.3
+    edge[dir=black,arrowtail=empty]
+
+
+2024338329256[ label="{Transportation|+mot:MeansOfTransport\l+departureCity:City\l+arrivalCity:City\l+departureDate:Date\l+returnDate:Date\l+numOfPass:PositiveINT\l+ticketType:TicketType\l+ticketClass:TicketClass\l+priceLimit:FLOAT\l+currency:Currency\l}"]
+
+2024338274504[ label="{Currency|RSD\|EUR\|USD}"]
+
+2024338319816[ label="{MeansOfTransport|plane\|bus\|train}"]
+
+2024338374568[ label="{TicketClass|economy\|business\|first\|second\|couchette}"]
+
+2024338270728[ label="{Year|[2-9][0-9]\{3\}}"]
+
+2024338259400[ label="{Date|[0-3][0-9] /\|. [0-1][0-9] Separator [2-9][0-9]\{3\}\|Month Separator Day Separator Year}"]
+
+2024338253736[ label="{Day|[0-3][0-9]}"]
+
+2024338323592[ label="{City|[a-zA-Z]+}"]
+
+2024338371736[ label="{TicketType|one-way\|return}"]
+
+2024338264120[ label="{PositiveINT|[1-9]\\d*}"]
+
+2024338271672[ label="{Separator|/\|.}"]
+
+2024338254680[ label="{Month|[0-1][0-9]}"]
+
+2024338344360[ label="{BASETYPE|}"]
+2024338344360 -> 2024338355688 [dir=back]
+2024338344360 -> 2024338330200 [dir=back]
+2024338344360 -> 2024338317928 [dir=back]
+2024338344360 -> 2024338325480 [dir=back]
+
+2024338325480[ label="{STRING|}"]
+
+2024338340584[ label="{INT|}"]
+
+2024338330200[ label="{BOOL|}"]
+
+2024338334920[ label="{*OBJECT|}"]
+2024338334920 -> 2024338344360 [dir=back]
+
+2024338355688[ label="{NUMBER|}"]
+2024338355688 -> 2024338333032 [dir=back]
+2024338355688 -> 2024338340584 [dir=back]
+
+2024338333032[ label="{FLOAT|}"]
+
+2024338317928[ label="{ID|}"]
+
+
+}

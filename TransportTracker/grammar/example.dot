@@ -1,0 +1,16 @@
+
+    digraph xtext {
+    fontname = "Bitstream Vera Sans"
+    fontsize = 8
+    node[
+        shape=record,
+        style=filled,
+        fillcolor=aliceblue
+    ]
+    nodesep = 0.3
+    edge[dir=black,arrowtail=empty]
+
+
+2024343662096[label="{:Transportation|+mot:str='plane'\l+departureCity:str='Beograd'\l+arrivalCity:str='Milano'\l+departureDate:str='15/03/2018'\l+returnDate:str='20/03/2018'\l+numOfPass:str='2'\l+ticketType:str='return'\l+ticketClass:str='economy'\l+priceLimit:float=200.0\l+currency:str='EUR'\l}"]
+
+}

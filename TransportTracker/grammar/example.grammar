@@ -1,2 +1,2 @@
-Travel with plane From beograd To milano Departure "23.01.2018" Return "24.01.2018"
-NumberOfPassengers 3 TicketType return TicketClass economy PriceLimit 500
+Travel with plane From Beograd To Milano Departure 15/03/2018 Return 20/03/2018
+NumberOfPassengers 2 TicketType return TicketClass economy PriceLimit 200 EUR

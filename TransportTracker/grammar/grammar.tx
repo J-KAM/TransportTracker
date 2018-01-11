@@ -2,14 +2,14 @@ Transportation:
     "Travel with" mot = MeansOfTransport
     "From" departureCity = City
     "To" arrivalCity = City
-    "Departure" departureDate = STRING
-    "Return" returnDate = STRING
+    "Departure" departureDate = Date
+    ("Return" returnDate = Date)?
     "NumberOfPassengers" numOfPass = PositiveINT
     "TicketType" ticketType = TicketType
     "TicketClass" ticketClass = TicketClass
-    ("PriceLimit" priceLimit = FLOAT)?
-
+    ("PriceLimit" priceLimit = FLOAT currency = Currency)?
 ;
+
 MeansOfTransport:
     'plane' | 'bus' | 'train'
 ;
@@ -30,3 +30,26 @@ PositiveINT:
     /[1-9]\d*/
 ;
 
+Date:
+    ( Day Separator Month Separator Year ) | ( Month Separator Day Separator Year)
+;
+
+Day:
+    /[0-3][0-9]/
+;
+
+Month:
+    /[0-1][0-9]/
+;
+
+Year:
+    /[2-9][0-9]{3}/
+;
+
+Separator:
+    '/' | '.'
+;
+
+Currency:
+    'RSD' | 'EUR' | 'USD'
+;
