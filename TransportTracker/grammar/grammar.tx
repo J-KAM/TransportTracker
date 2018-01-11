@@ -1,0 +1,32 @@
+Transportation:
+    "Travel with" mot = MeansOfTransport
+    "From" departureCity = City
+    "To" arrivalCity = City
+    "Departure" departureDate = STRING
+    "Return" returnDate = STRING
+    "NumberOfPassengers" numOfPass = PositiveINT
+    "TicketType" ticketType = TicketType
+    "TicketClass" ticketClass = TicketClass
+    ("PriceLimit" priceLimit = FLOAT)?
+
+;
+MeansOfTransport:
+    'plane' | 'bus' | 'train'
+;
+
+City:
+    /[a-zA-Z]+/
+;
+
+TicketType:
+    'one-way' | 'return'
+;
+
+TicketClass:
+    'economy' | 'business' | 'first' | 'second' | 'couchette'
+;
+
+PositiveINT:
+    /[1-9]\d*/
+;
+
