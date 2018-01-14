@@ -1,13 +1,8 @@
-Transportation:
-    "Travel with" mot = MeansOfTransport
-    "From" departureCity = City
-    "To" arrivalCity = City
-    "Departure" departureDate = Date
-    ("Return" returnDate = Date)?
-    "NumberOfPassengers" numOfPass = PositiveINT
-    "TicketType" ticketType = TicketType
-    "TicketClass" ticketClass = TicketClass
-    ("PriceLimit" priceLimit = FLOAT currency = Currency)?
+TicketQuery:
+    "I" "need" numOfTickets = PositiveINT ticketType = TicketType ticketClass = TicketClass "class"
+    mot = MeansOfTransport ("tickets" | "ticket") "from" departureCity = City "to" arrivalCity = City
+    "on" departureDate = Date ("with" "the" "return" "date" returnDate = Date)? "."
+    ("Maximum" "ticket" "price" ":" priceLimit = FLOAT currency = Currency ".")?
 ;
 
 MeansOfTransport:
@@ -31,15 +26,15 @@ PositiveINT:
 ;
 
 Date:
-    ( Day Separator Month Separator Year ) | ( Month Separator Day Separator Year)
+    Day Separator Month Separator Year
 ;
 
 Day:
-    /[0-3][0-9]/
+    /0[1-9]/ | /[1-2][0-9]/ | /3[0-1]/
 ;
 
 Month:
-    /[0-1][0-9]/
+    /0[1-9]/ | /1[0-2]/
 ;
 
 Year:
