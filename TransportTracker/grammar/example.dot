@@ -11,6 +11,6 @@
     edge[dir=black,arrowtail=empty]
 
 
-2024343662096[label="{:Transportation|+mot:str='plane'\l+departureCity:str='Beograd'\l+arrivalCity:str='Milano'\l+departureDate:str='15/03/2018'\l+returnDate:str='20/03/2018'\l+numOfPass:str='2'\l+ticketType:str='return'\l+ticketClass:str='economy'\l+priceLimit:float=200.0\l+currency:str='EUR'\l}"]
+2327462294696[label="{:TicketQuery|+numOfTickets:str='2'\l+ticketType:str='return'\l+ticketClass:str='economy'\l+mot:str='plane'\l+departureCity:str='Belgrade'\l+arrivalCity:str='Milan'\l+departureDate:str='15/03/2018'\l+returnDate:str='20/03/2018'\l+priceLimit:float=200.0\l+currency:str='EUR'\l}"]
 
 }

@@ -11,6 +11,6 @@
     edge[dir=black,arrowtail=empty]
 
 
-2024344616184[label="{:Transportation|+mot:str='train'\l+departureCity:str='Vienna'\l+arrivalCity:str='Prague'\l+departureDate:str='06/06/2018'\l+returnDate:str='10/06/2018'\l+numOfPass:str='5'\l+ticketType:str='one-way'\l+ticketClass:str='first'\l+priceLimit:float=40.0\l+currency:str='EUR'\l}"]
+2327463256472[label="{:TicketQuery|+numOfTickets:str='5'\l+ticketType:str='one-way'\l+ticketClass:str='second'\l+mot:str='train'\l+departureCity:str='Vienna'\l+arrivalCity:str='Prague'\l+departureDate:str='06.03.2018'\l+priceLimit:float=40.0\l+currency:str='EUR'\l}"]
 
 }
