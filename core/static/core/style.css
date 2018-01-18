@@ -1,0 +1,27 @@
+body {
+    background: white url("images/image.jpg");
+    font-family: 'Pacifico', cursive;
+}
+
+textarea {
+    resize: none;
+}
+
+.navbar-brand {
+    font-size: 20px;
+}
+
+.navbar {
+    border-radius: 0;
+}
+
+.text {
+    font-size: 20px;
+}
+
+.btn-search {
+    
+    background-color: #ffd700;
+}
+
+
