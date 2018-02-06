@@ -11,6 +11,22 @@
     edge[dir=black,arrowtail=empty]
 
 
-2327463256472[label="{:TicketQuery|+numOfTickets:str='5'\l+ticketType:str='one-way'\l+ticketClass:str='second'\l+mot:str='train'\l+departureCity:str='Vienna'\l+arrivalCity:str='Prague'\l+departureDate:str='06.03.2018'\l+priceLimit:float=40.0\l+currency:str='EUR'\l}"]
+140632934135120 -> 140632933775456 [label="number_of_tickets" arrowtail=diamond dir=both]
+140632933775456[label="{:Number_of_tickets|+number:str='2'\l}"]
+140632934135120 -> 140632933057816 [label="ticket_type" arrowtail=diamond dir=both]
+140632933057816[label="{:Ticket_type|+type:str='round-trip'\l}"]
+140632934135120 -> 140632932380008 [label="ticket_class" arrowtail=diamond dir=both]
+140632932380008[label="{:Ticket_class|+class:str='first'\l}"]
+140632934135120 -> 140632932380064 [label="transport_type" arrowtail=diamond dir=both]
+140632932380064[label="{:Transport_type|+transport:str='train'\l}"]
+140632934135120 -> 140632932377376 [label="from" arrowtail=diamond dir=both]
+140632932377376[label="{:From|+departure_city:str='Vienna'\l}"]
+140632934135120 -> 140632933826232 [label="to" arrowtail=diamond dir=both]
+140632933826232[label="{:To|+arrival_city:str='Prague'\l}"]
+140632934135120 -> 140632932321096 [label="on" arrowtail=diamond dir=both]
+140632932321096[label="{:On|+departure_date:str='15.03.2018'\l}"]
+140632934135120 -> 140632933826064 [label="return_date" arrowtail=diamond dir=both]
+140632933826064[label="{:Return_date|+return_date:str='20.03.2018'\l}"]
+140632934135120[label="{:Ticket_query|}"]
 
 }

@@ -1,11 +1,91 @@
-TicketQuery:
-    "I" "need" numOfTickets = PositiveINT ticketType = TicketType ticketClass = TicketClass "class"
-    mot = MeansOfTransport ("tickets" | "ticket") "from" departureCity = City "to" arrivalCity = City
-    "on" departureDate = Date ("with" "the" "return" "date" returnDate = Date)? "."
-    ("Maximum" "ticket" "price" ":" priceLimit = FLOAT currency = Currency ".")?
+Ticket_query[noskipws]:
+    number_of_tickets = Number_of_tickets
+    ticket_type = Ticket_type
+    ticket_class = Ticket_class
+    transport_type = Transport_type
+    (from=From to=To | to=To from=From)
+    on=On
+    (return_date=Return_date)?
+    (price=Price
+    currency=Currency)?
+    /(.|\n)*/
 ;
 
-MeansOfTransport:
+Number_of_tickets:
+    /.*?(?=(^\s*|\s+)(\/\*|'|[1-9]\d*\s))/
+    /\s*/
+    number = Positive_number
+;
+
+Ticket_type:
+    /.*?(?=(^\s*|\s+)(\/\*|'|one-way\s|round-trip\s))/
+    /\s*/
+    type = Ticket_type_value
+;
+
+Ticket_class:
+    /.*?(?=(^\s*|\s+)(\/\*|'|economy\s|business\s|first\s|second\s|couchette\s))/
+    /\s*/
+    class = Ticket_class_value
+;
+
+Transport_type:
+    /.*?(?=(^\s*|\s+)(\/\*|'|plane\s|bus\s|train\s))/
+    /\s*/
+    transport = Means_of_transport
+;
+
+From:
+    /.*?(?=(^\s*|\s+)(\/\*|'|from\s))/
+    /\s*/
+    'from'
+     /\s*/
+    departure_city = City
+;
+
+To:
+    /.*?(?=(^\s*|\s+)(\/\*|'|to\s))/
+    /\s*/
+    'to'
+    /\s*/
+    arrival_city = City
+;
+
+On:
+    /.*?(?=(^\s*|\s+)(\/\*|'|on\s))/
+    /\s*/
+    'on'
+    /\s*/
+    departure_date = Date
+;
+
+Return_date:
+    /.*?(?=(^\s*|\s+)(\/\*|'|return\s))/
+    /\s*/
+    'return'
+     /\s*/
+     /.*?(?=([0-9]))/
+      /\s*/
+     return_date = Date
+
+;
+
+Price:
+    /.*?(?=(^\s*|\s+)(\/\*|'|price\s))/
+    /\s*/
+    'price'
+     /\s*/
+     /.*?(?=([1-9]\d*))/
+    price = Positive_number
+;
+
+Currency:
+    /.*?(?=(^\s*|\s+)(\/\*|'|rsd|eur|usd))/
+    /\s*/
+    currency = Currency_value
+;
+
+Means_of_transport:
     'plane' | 'bus' | 'train'
 ;
 
@@ -13,15 +93,15 @@ City:
     /[a-zA-Z]+/
 ;
 
-TicketType:
-    'one-way' | 'return'
+Ticket_type_value:
+    'one-way' | 'round-trip'
 ;
 
-TicketClass:
+Ticket_class_value:
     'economy' | 'business' | 'first' | 'second' | 'couchette'
 ;
 
-PositiveINT:
+Positive_number:
     /[1-9]\d*/
 ;
 
@@ -45,6 +125,6 @@ Separator:
     '/' | '.'
 ;
 
-Currency:
-    'RSD' | 'EUR' | 'USD'
+Currency_value:
+    'rsd' | 'eur' | 'usd'
 ;
