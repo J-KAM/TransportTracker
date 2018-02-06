@@ -11,6 +11,26 @@
     edge[dir=black,arrowtail=empty]
 
 
-2024343662096[label="{:Transportation|+mot:str='plane'\l+departureCity:str='Beograd'\l+arrivalCity:str='Milano'\l+departureDate:str='15/03/2018'\l+returnDate:str='20/03/2018'\l+numOfPass:str='2'\l+ticketType:str='return'\l+ticketClass:str='economy'\l+priceLimit:float=200.0\l+currency:str='EUR'\l}"]
+140632932601808 -> 140632932695568 [label="number_of_tickets" arrowtail=diamond dir=both]
+140632932695568[label="{:Number_of_tickets|+number:str='2'\l}"]
+140632932601808 -> 140632932695512 [label="ticket_type" arrowtail=diamond dir=both]
+140632932695512[label="{:Ticket_type|+type:str='round-trip'\l}"]
+140632932601808 -> 140632932695232 [label="ticket_class" arrowtail=diamond dir=both]
+140632932695232[label="{:Ticket_class|+class:str='economy'\l}"]
+140632932601808 -> 140632932695848 [label="transport_type" arrowtail=diamond dir=both]
+140632932695848[label="{:Transport_type|+transport:str='plane'\l}"]
+140632932601808 -> 140632932708648 [label="from" arrowtail=diamond dir=both]
+140632932708648[label="{:From|+departure_city:str='Belgrade'\l}"]
+140632932601808 -> 140632932708704 [label="to" arrowtail=diamond dir=both]
+140632932708704[label="{:To|+arrival_city:str='Milan'\l}"]
+140632932601808 -> 140632932708760 [label="on" arrowtail=diamond dir=both]
+140632932708760[label="{:On|+departure_date:str='15/03/2018'\l}"]
+140632932601808 -> 140632932708816 [label="return_date" arrowtail=diamond dir=both]
+140632932708816[label="{:Return_date|+return_date:str='20/03/2018'\l}"]
+140632932601808 -> 140632932708872 [label="price" arrowtail=diamond dir=both]
+140632932708872[label="{:Price|+price:str='200'\l}"]
+140632932601808 -> 140632932708928 [label="currency" arrowtail=diamond dir=both]
+140632932708928[label="{:Currency|+currency:str='usd'\l}"]
+140632932601808[label="{:Ticket_query|}"]
 
 }
