@@ -11,82 +11,82 @@
     edge[dir=black,arrowtail=empty]
 
 
-38528488[ label="{Ticket_class|+class:Ticket_class_value\l}"]
+139783806059320[ label="{Ticket_class_value|economy\|business\|first\|second\|couchette}"]
 
-37383496[ label="{Number_of_tickets|+number:Positive_number\l}"]
+139783805080392[ label="{From|+departure_city:City\l}"]
 
-38328760[ label="{Date|0[1-9]\|[1-2][0-9]\|3[0-1] /\|. 0[1-9]\|1[0-2] Separator [2-9][0-9]\{3\}}"]
+139783805088520[ label="{Return_date|+return_date:Date\l}"]
 
-37507240[ label="{Month|0[1-9]\|1[0-2]}"]
+139783804590872[ label="{City|[a-zA-Z]+}"]
 
-38356744[ label="{Means_of_transport|plane\|bus\|train}"]
+139783806045816[ label="{Transport_type|+transport:Means_of_transport\l}"]
 
-37468360[ label="{Ticket_type|+type:Ticket_type_value\l}"]
+139783805327368[ label="{On|+departure_date:Date\l}"]
 
-38418392[ label="{Currency_value|rsd\|eur\|usd}"]
+139783806429416[ label="{Month|0[1-9]\|1[0-2]}"]
 
-38294664[ label="{Price|+price:Positive_number\l}"]
+139783806028360[ label="{Currency_value|rsd\|eur\|usd}"]
 
-38610792[ label="{From|+departure_city:City\l}"]
+139783806133576[ label="{Year|[2-9][0-9]\{3\}}"]
 
-38714856[ label="{Transport_type|+transport:Means_of_transport\l}"]
+139783806225896[ label="{Ticket_class|+class:Ticket_class_value\l}"]
 
-37735624[ label="{On|+departure_date:Date\l}"]
+139783805956136[ label="{Ticket_type|+type:Ticket_type_value\l}"]
 
-37228888[ label="{Currency|+currency:Currency_value\l}"]
+139783804789784[ label="{Ticket_type_value|one-way\|round-trip}"]
 
-38683672[ label="{Positive_number|[1-9]\\d*}"]
+139783806080232[ label="{Price|+price:Positive_number\l}"]
 
-38282472[ label="{Return_date|+return_date:Date\l}"]
+139783806320088[ label="{Currency|+currency:Currency_value\l}"]
 
-37570504[ label="{Separator|/\|.}"]
+139783806319144[ label="{Positive_number|[1-9]\\d*}"]
 
-37938296[ label="{Ticket_class_value|economy\|business\|first\|second\|couchette}"]
+139783805902840 -> 139783805337000[arrowtail=diamond, dir=both, headlabel="number_of_tickets "]
+139783805902840 -> 139783805956136[arrowtail=diamond, dir=both, headlabel="ticket_type "]
+139783805902840 -> 139783806225896[arrowtail=diamond, dir=both, headlabel="ticket_class "]
+139783805902840 -> 139783806045816[arrowtail=diamond, dir=both, headlabel="transport_type "]
+139783805902840 -> 139783805080392[arrowtail=diamond, dir=both, headlabel="from "]
+139783805902840 -> 139783805064568[arrowtail=diamond, dir=both, headlabel="to "]
+139783805902840 -> 139783805327368[arrowtail=diamond, dir=both, headlabel="on "]
+139783805902840 -> 139783805088520[arrowtail=diamond, dir=both, headlabel="return_date "]
+139783805902840 -> 139783806080232[arrowtail=diamond, dir=both, headlabel="price "]
+139783805902840 -> 139783806320088[arrowtail=diamond, dir=both, headlabel="currency "]
+139783805902840[ label="{Ticket_query|}"]
 
-38907944[ label="{City|[a-zA-Z]+}"]
+139783806415656[ label="{Day|0[1-9]\|[1-2][0-9]\|3[0-1]}"]
 
-38508984[ label="{To|+arrival_city:City\l}"]
+139783805064568[ label="{To|+arrival_city:City\l}"]
 
-38212136 -> 37383496[arrowtail=diamond, dir=both, headlabel="number_of_tickets "]
-38212136 -> 37468360[arrowtail=diamond, dir=both, headlabel="ticket_type "]
-38212136 -> 38528488[arrowtail=diamond, dir=both, headlabel="ticket_class "]
-38212136 -> 38714856[arrowtail=diamond, dir=both, headlabel="transport_type "]
-38212136 -> 38610792[arrowtail=diamond, dir=both, headlabel="from "]
-38212136 -> 38508984[arrowtail=diamond, dir=both, headlabel="to "]
-38212136 -> 37735624[arrowtail=diamond, dir=both, headlabel="on "]
-38212136 -> 38282472[arrowtail=diamond, dir=both, headlabel="return_date "]
-38212136 -> 38294664[arrowtail=diamond, dir=both, headlabel="price "]
-38212136 -> 37228888[arrowtail=diamond, dir=both, headlabel="currency "]
-38212136[ label="{Ticket_query|}"]
+139783805118104[ label="{Date|0[1-9]\|[1-2][0-9]\|3[0-1] /\|. 0[1-9]\|1[0-2] Separator [2-9][0-9]\{3\}}"]
 
-37917784[ label="{Ticket_type_value|one-way\|round-trip}"]
+139783805337000[ label="{Number_of_tickets|+number:Positive_number\l}"]
 
-36858360[ label="{Day|0[1-9]\|[1-2][0-9]\|3[0-1]}"]
+139783805275000[ label="{Means_of_transport|plane\|bus\|train}"]
 
-38075528[ label="{Year|[2-9][0-9]\{3\}}"]
+139783806211304[ label="{Separator|/\|.}"]
 
-38500712[ label="{FLOAT|}"]
+139783804532120[ label="{NUMBER|}"]
+139783804532120 -> 139783806158216 [dir=back]
+139783804532120 -> 139783806119976 [dir=back]
 
-37343160[ label="{*OBJECT|}"]
-37343160 -> 37963384 [dir=back]
+139783806119976[ label="{INT|}"]
 
-37963384[ label="{BASETYPE|}"]
-37963384 -> 37577016 [dir=back]
-37963384 -> 38654856 [dir=back]
-37963384 -> 37457320 [dir=back]
-37963384 -> 38576888 [dir=back]
+139783805034392[ label="{STRING|}"]
 
-37457320[ label="{ID|}"]
+139783806152184[ label="{BOOL|}"]
 
-38576888[ label="{STRING|}"]
+139783806182344[ label="{ID|}"]
 
-38654856[ label="{BOOL|}"]
+139783805161192[ label="{*OBJECT|}"]
+139783805161192 -> 139783805287496 [dir=back]
 
-38573752[ label="{INT|}"]
+139783805287496[ label="{BASETYPE|}"]
+139783805287496 -> 139783804532120 [dir=back]
+139783805287496 -> 139783806152184 [dir=back]
+139783805287496 -> 139783806182344 [dir=back]
+139783805287496 -> 139783805034392 [dir=back]
 
-37577016[ label="{NUMBER|}"]
-37577016 -> 38500712 [dir=back]
-37577016 -> 38573752 [dir=back]
+139783806158216[ label="{FLOAT|}"]
 
 
 }

@@ -24,4 +24,8 @@ textarea {
     background-color: #ffd700;
 }
 
+.error {
+  color: red;
+}
+
 
