@@ -11,6 +11,7 @@
     edge[dir=black,arrowtail=empty]
 
 
+<<<<<<< HEAD
 2143284369000 -> 2143284280736 [label="number_of_tickets" arrowtail=diamond dir=both]
 2143284280736[label="{:Number_of_tickets|+number:str='2'\l}"]
 2143284369000 -> 2143284219464 [label="ticket_type" arrowtail=diamond dir=both]
@@ -32,5 +33,28 @@
 2143284369000 -> 2143284188608 [label="currency" arrowtail=diamond dir=both]
 2143284188608[label="{:Currency|+currency:str='usd'\l}"]
 2143284369000[label="{:Ticket_query|}"]
+=======
+140264806454440 -> 140264805558816 [label="number_of_tickets" arrowtail=diamond dir=both]
+140264805558816[label="{:Number_of_tickets|+number:str='2'\l}"]
+140264806454440 -> 140264805556576 [label="ticket_type" arrowtail=diamond dir=both]
+140264805556576[label="{:Ticket_type|+type:str='round-trip'\l}"]
+140264806454440 -> 140264805538560 [label="ticket_class" arrowtail=diamond dir=both]
+140264805538560[label="{:Ticket_class|+Class:str='economy'\l}"]
+140264806454440 -> 140264805978968 [label="transport_type" arrowtail=diamond dir=both]
+140264805978968[label="{:Transport_type|+transport:str='plane'\l}"]
+140264806454440 -> 140264805612624 [label="From" arrowtail=diamond dir=both]
+140264805612624[label="{:From|+departure_city:str='Belgrade'\l}"]
+140264806454440 -> 140264805612400 [label="to" arrowtail=diamond dir=both]
+140264805612400[label="{:To|+arrival_city:str='Milan'\l}"]
+140264806454440 -> 140264805613128 [label="on" arrowtail=diamond dir=both]
+140264805613128[label="{:On|+departure_date:str='15/03/2018'\l}"]
+140264806454440 -> 140264805613296 [label="return_date" arrowtail=diamond dir=both]
+140264805613296[label="{:Return_date|+return_date:str='20/03/2018'\l}"]
+140264806454440 -> 140264805613352 [label="price" arrowtail=diamond dir=both]
+140264805613352[label="{:Price|+price:str='200'\l}"]
+140264806454440 -> 140264805613408 [label="currency" arrowtail=diamond dir=both]
+140264805613408[label="{:Currency|+currency:str='eur'\l}"]
+140264806454440[label="{:Ticket_query|}"]
+>>>>>>> development
 
 }

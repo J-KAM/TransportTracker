@@ -57,7 +57,7 @@ def execute_for_web(path, grammar_file_name, query, export_dot, export_png):
         model_export(model, model_name + '.dot')
     if export_png:
         graph = pydot.graph_from_dot_file(model_name + '.dot')
-        #graph[0].write_png(model_name + '.png')
+        graph[0].write_png(model_name + '.png')
 
     return model
 
