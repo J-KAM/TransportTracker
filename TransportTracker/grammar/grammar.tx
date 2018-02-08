@@ -3,7 +3,7 @@ Ticket_query[noskipws]:
     ticket_type = Ticket_type
     ticket_class = Ticket_class
     transport_type = Transport_type
-    (from=From to=To | to=To from=From)
+    (From=From to=To | to=To From=From)
     on=On
     (return_date=Return_date)?
     (price=Price
@@ -26,7 +26,7 @@ Ticket_type:
 Ticket_class:
     /.*?(?=(^\s*|\s+)(\/\*|'|economy\s|business\s|first\s|second\s|couchette\s))/
     /\s*/
-    class = Ticket_class_value
+    Class = Ticket_class_value
 ;
 
 Transport_type:
