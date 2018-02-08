@@ -1,6 +1,7 @@
 import os
 
 from TransportTracker.execute.execute import execute
+from TransportTracker.grammar.query import TicketQuery
 from TransportTracker.settings import BASE_DIR
 
 
@@ -14,6 +15,8 @@ def main(example_file_name, debug=False):
 
     model = execute(os.path.join(path, "grammar"), 'grammar.tx', example_file_name, debug, debug)
 
+    query = TicketQuery()
+    query.interpret(model)
 
 if __name__ == '__main__':
     main('example.grammar', True)

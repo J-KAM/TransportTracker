@@ -1,9 +1,10 @@
 from django.shortcuts import render
 from django.views import View
 
+from TransportTracker.grammar.query import TicketQuery
 from core.forms import QueryForm
 
-from textx.exceptions import TextXSyntaxError
+from textx.exceptions import TextXSyntaxError, TextXSemanticError
 import os
 from TransportTracker.settings import BASE_DIR
 from TransportTracker.execute.execute import execute_for_web
@@ -31,6 +32,9 @@ class QueryFormView(View):
 
         try:
             model = execute_for_web(os.path.join(path, "grammar"), 'grammar.tx', query, True, True)
+            query = TicketQuery()
+            query.interpret(model)
+
         except TextXSyntaxError:
             return render(request, self.template_name, {'form': form, 'error_message': 'Syntax error'})
 
