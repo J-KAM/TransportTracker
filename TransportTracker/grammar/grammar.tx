@@ -6,8 +6,8 @@ Ticket_query[noskipws]:
     (From=From to=To | to=To From=From)
     on=On
     (return_date=Return_date)?
-    (price=Price
-    currency=Currency)?
+    (price=Price)?
+    (currency=Currency)?
     /(.|\n)*/
 ;
 
