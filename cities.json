@@ -1,0 +1,10 @@
+[
+  {
+    "pk": 1,
+    "model": "core.city",
+    "fields": {
+      "iata_code": "BEG",
+      "name": "belgrade"
+    }
+  }
+]

@@ -6,14 +6,20 @@ from textx.exceptions import TextXSemanticError
 class TicketQuery(object):
 
     def interpret(self, model):
+        model.From.departure_city = city_name_processor(model.From.departure_city)
+        model.From.arrival_city = city_name_processor(model.to.arrival_city)
         ticket_class_processor(model.transport_type.transport, model.ticket_class.Class)
         cities_processor(model.From.departure_city, model.to.arrival_city)
-        date_format_processor(model.on.departure_date)
+        model.on.departure_date = date_format_processor(model.on.departure_date)
         round_trip_processor(model.ticket_type.type, model.return_date)
         if model.return_date is not None:
-            date_format_processor(model.return_date.return_date)
+            model.return_date.return_date = date_format_processor(model.return_date.return_date)
             date_processor(model.on.departure_date, model.return_date.return_date)
         price_currency_processor(model.price, model.currency)
+
+
+def city_name_processor(city):
+    return city.replace('-', ' ')
 
 
 def ticket_class_processor(transport_type, ticket_class):
@@ -42,6 +48,7 @@ def date_format_processor(date):
 
     try:
         datetime.date(year=int(year), month=int(month), day=int(day))
+        return datetime.datetime.strptime(date, '%d/%m/%Y').strftime('%Y-%m-%d')
     except:
         raise TextXSemanticError('Departure or return date is not valid.')
 

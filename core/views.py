@@ -1,3 +1,4 @@
+import requests
 from django.shortcuts import render
 from django.views import View
 
@@ -8,6 +9,7 @@ from textx.exceptions import TextXSyntaxError, TextXSemanticError
 import os
 from TransportTracker.settings import BASE_DIR
 from TransportTracker.execute.execute import execute_for_web
+from core.models import City
 
 
 class QueryFormView(View):
@@ -34,6 +36,14 @@ class QueryFormView(View):
             model = execute_for_web(os.path.join(path, "grammar"), 'grammar.tx', query, True, True)
             query = TicketQuery()
             query.interpret(model)
+
+            departure_city_code = ""
+            arrival_city_code = ""
+
+            if City.objects.get(name=model.From.departure_city).exits():
+                departure_city_code = City.objects.get(name=model.From.departure_city).iata_code
+            if City.objects.get(name=model.to.arrival_city).exits():
+                arrival_city_code = City.objects.get(name=model.to.arrival_city).iata_code
 
         except TextXSyntaxError as error:
             return render(request, self.template_name, {'form': form, 'error_message': syntax_error_message(str(error))})

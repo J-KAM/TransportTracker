@@ -90,7 +90,7 @@ Means_of_transport:
 ;
 
 City:
-    /[a-zA-Z]+/
+   /[a-zA-Z]+([-]?[a-zA-Z]+)*/
 ;
 
 Ticket_type_value:
