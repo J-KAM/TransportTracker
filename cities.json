@@ -1502,5 +1502,2021 @@
       "iata_code": "LYS",
       "name": "lyon"
     }
+  },
+  {
+    "pk": 189,
+    "model": "core.city",
+    "fields": {
+      "iata_code": "MFM",
+      "name": "macau"
+    }
+  },
+  {
+    "pk": 190,
+    "model": "core.city",
+    "fields": {
+      "iata_code": "MAA",
+      "name": "madras"
+    }
+  },
+  {
+    "pk": 191,
+    "model": "core.city",
+    "fields": {
+      "iata_code": "MAD",
+      "name": "madrid"
+    }
+  },
+  {
+    "pk": 192,
+    "model": "core.city",
+    "fields": {
+      "iata_code": "SSG",
+      "name": "malabo"
+    }
+  },
+  {
+    "pk": 193,
+    "model": "core.city",
+    "fields": {
+      "iata_code": "AGP",
+      "name": "malaga"
+    }
+  },
+  {
+    "pk": 194,
+    "model": "core.city",
+    "fields": {
+      "iata_code": "MLX",
+      "name": "malatya"
+    }
+  },
+  {
+    "pk": 195,
+    "model": "core.city",
+    "fields": {
+      "iata_code": "MMX",
+      "name": "malmo"
+    }
+  },
+  {
+    "pk": 196,
+    "model": "core.city",
+    "fields": {
+      "iata_code": "MAO",
+      "name": "manaus"
+    }
+  },
+  {
+    "pk": 197,
+    "model": "core.city",
+    "fields": {
+      "iata_code": "MAN",
+      "name": "manchester"
+    }
+  },
+  {
+    "pk": 198,
+    "model": "core.city",
+    "fields": {
+      "iata_code": "MNL",
+      "name": "manila"
+    }
+  },
+  {
+    "pk": 199,
+    "model": "core.city",
+    "fields": {
+      "iata_code": "MBX",
+      "name": "maribor"
+    }
+  },
+  {
+    "pk": 200,
+    "model": "core.city",
+    "fields": {
+      "iata_code": "RAK",
+      "name": "marrakesh"
+    }
+  },
+  {
+    "pk": 201,
+    "model": "core.city",
+    "fields": {
+      "iata_code": "MRS",
+      "name": "marseille"
+    }
+  },
+  {
+    "pk": 202,
+    "model": "core.city",
+    "fields": {
+      "iata_code": "MRU",
+      "name": "mauritius"
+    }
+  },
+  {
+    "pk": 203,
+    "model": "core.city",
+    "fields": {
+      "iata_code": "MED",
+      "name": "medina"
+    }
+  },
+  {
+    "pk": 204,
+    "model": "core.city",
+    "fields": {
+      "iata_code": "MEL",
+      "name": "melbourne"
+    }
+  },
+  {
+    "pk": 205,
+    "model": "core.city",
+    "fields": {
+      "iata_code": "MEM",
+      "name": "memphis"
+    }
+  },
+  {
+    "pk": 206,
+    "model": "core.city",
+    "fields": {
+      "iata_code": "MEZ",
+      "name": "messina"
+    }
+  },
+  {
+    "pk": 207,
+    "model": "core.city",
+    "fields": {
+      "iata_code": "MEX",
+      "name": "mexico city"
+    }
+  },
+  {
+    "pk": 208,
+    "model": "core.city",
+    "fields": {
+      "iata_code": "MIA",
+      "name": "miami"
+    }
+  },
+  {
+    "pk": 209,
+    "model": "core.city",
+    "fields": {
+      "iata_code": "MIL",
+      "name": "milan"
+    }
+  },
+  {
+    "pk": 210,
+    "model": "core.city",
+    "fields": {
+      "iata_code": "MKE",
+      "name": "milwaukee"
+    }
+  },
+  {
+    "pk": 211,
+    "model": "core.city",
+    "fields": {
+      "iata_code": "MSQ",
+      "name": "minsk"
+    }
+  },
+  {
+    "pk": 212,
+    "model": "core.city",
+    "fields": {
+      "iata_code": "MOD",
+      "name": "modesto"
+    }
+  },
+  {
+    "pk": 213,
+    "model": "core.city",
+    "fields": {
+      "iata_code": "MBA",
+      "name": "mombasa"
+    }
+  },
+  {
+    "pk": 214,
+    "model": "core.city",
+    "fields": {
+      "iata_code": "MIR",
+      "name": "monastir"
+    }
+  },
+  {
+    "pk": 215,
+    "model": "core.city",
+    "fields": {
+      "iata_code": "MLW",
+      "name": "monrovia"
+    }
+  },
+  {
+    "pk": 216,
+    "model": "core.city",
+    "fields": {
+      "iata_code": "MVD",
+      "name": "montevideo"
+    }
+  },
+  {
+    "pk": 217,
+    "model": "core.city",
+    "fields": {
+      "iata_code": "YMQ",
+      "name": "montreal"
+    }
+  },
+  {
+    "pk": 218,
+    "model": "core.city",
+    "fields": {
+      "iata_code": "HAH",
+      "name": "moroni"
+    }
+  },
+  {
+    "pk": 219,
+    "model": "core.city",
+    "fields": {
+      "iata_code": "MOW",
+      "name": "moscow"
+    }
+  },
+  {
+    "pk": 220,
+    "model": "core.city",
+    "fields": {
+      "iata_code": "OMO",
+      "name": "mostar"
+    }
+  },
+  {
+    "pk": 221,
+    "model": "core.city",
+    "fields": {
+      "iata_code": "MUC",
+      "name": "muenchen"
+    }
+  },
+  {
+    "pk": 222,
+    "model": "core.city",
+    "fields": {
+      "iata_code": "MCT",
+      "name": "muscat"
+    }
+  },
+  {
+    "pk": 223,
+    "model": "core.city",
+    "fields": {
+      "iata_code": "JMK",
+      "name": "mykonos"
+    }
+  },
+  {
+    "pk": 224,
+    "model": "core.city",
+    "fields": {
+      "iata_code": "NAN",
+      "name": "nadi"
+    }
+  },
+  {
+    "pk": 225,
+    "model": "core.city",
+    "fields": {
+      "iata_code": "NGS",
+      "name": "nagasaki"
+    }
+  },
+  {
+    "pk": 226,
+    "model": "core.city",
+    "fields": {
+      "iata_code": "NBO",
+      "name": "nairobi"
+    }
+  },
+  {
+    "pk": 227,
+    "model": "core.city",
+    "fields": {
+      "iata_code": "ENC",
+      "name": "nancy"
+    }
+  },
+  {
+    "pk": 228,
+    "model": "core.city",
+    "fields": {
+      "iata_code": "ACK",
+      "name": "nantucket"
+    }
+  },
+  {
+    "pk": 229,
+    "model": "core.city",
+    "fields": {
+      "iata_code": "NAP",
+      "name": "naples"
+    }
+  },
+  {
+    "pk": 230,
+    "model": "core.city",
+    "fields": {
+      "iata_code": "BNA",
+      "name": "nashville"
+    }
+  },
+  {
+    "pk": 231,
+    "model": "core.city",
+    "fields": {
+      "iata_code": "NAS",
+      "name": "nassau"
+    }
+  },
+  {
+    "pk": 232,
+    "model": "core.city",
+    "fields": {
+      "iata_code": "NAT",
+      "name": "natal"
+    }
+  },
+  {
+    "pk": 233,
+    "model": "core.city",
+    "fields": {
+      "iata_code": "NLP",
+      "name": "nelspruit"
+    }
+  },
+  {
+    "pk": 234,
+    "model": "core.city",
+    "fields": {
+      "iata_code": "MSY",
+      "name": "new orleans"
+    }
+  },
+  {
+    "pk": 235,
+    "model": "core.city",
+    "fields": {
+      "iata_code": "JFK",
+      "name": "new york"
+    }
+  },
+  {
+    "pk": 236,
+    "model": "core.city",
+    "fields": {
+      "iata_code": "NCL",
+      "name": "newcastle"
+    }
+  },
+  {
+    "pk": 237,
+    "model": "core.city",
+    "fields": {
+      "iata_code": "NIM",
+      "name": "niamey"
+    }
+  },
+  {
+    "pk": 238,
+    "model": "core.city",
+    "fields": {
+      "iata_code": "NCE",
+      "name": "nice"
+    }
+  },
+  {
+    "pk": 239,
+    "model": "core.city",
+    "fields": {
+      "iata_code": "NIC",
+      "name": "nicosia"
+    }
+  },
+  {
+    "pk": 240,
+    "model": "core.city",
+    "fields": {
+      "iata_code": "INI",
+      "name": "nis"
+    }
+  },
+  {
+    "pk": 241,
+    "model": "core.city",
+    "fields": {
+      "iata_code": "NWI",
+      "name": "norwich"
+    }
+  },
+  {
+    "pk": 242,
+    "model": "core.city",
+    "fields": {
+      "iata_code": "EMA",
+      "name": "nottingham"
+    }
+  },
+  {
+    "pk": 243,
+    "model": "core.city",
+    "fields": {
+      "iata_code": "NKC",
+      "name": "nouakchott"
+    }
+  },
+  {
+    "pk": 244,
+    "model": "core.city",
+    "fields": {
+      "iata_code": "NOU",
+      "name": "noumea"
+    }
+  },
+  {
+    "pk": 245,
+    "model": "core.city",
+    "fields": {
+      "iata_code": "QND",
+      "name": "novi sad"
+    }
+  },
+  {
+    "pk": 246,
+    "model": "core.city",
+    "fields": {
+      "iata_code": "OVB",
+      "name": "novosibirsk"
+    }
+  },
+  {
+    "pk": 247,
+    "model": "core.city",
+    "fields": {
+      "iata_code": "NUE",
+      "name": "nuremberg"
+    }
+  },
+  {
+    "pk": 248,
+    "model": "core.city",
+    "fields": {
+      "iata_code": "OAK",
+      "name": "oakland"
+    }
+  },
+  {
+    "pk": 249,
+    "model": "core.city",
+    "fields": {
+      "iata_code": "ODS",
+      "name": "odessa"
+    }
+  },
+  {
+    "pk": 250,
+    "model": "core.city",
+    "fields": {
+      "iata_code": "OHD",
+      "name": "ohrid"
+    }
+  },
+  {
+    "pk": 251,
+    "model": "core.city",
+    "fields": {
+      "iata_code": "OKC",
+      "name": "oklahoma city"
+    }
+  },
+  {
+    "pk": 252,
+    "model": "core.city",
+    "fields": {
+      "iata_code": "ONT",
+      "name": "ontario"
+    }
+  },
+  {
+    "pk": 253,
+    "model": "core.city",
+    "fields": {
+      "iata_code": "SNA",
+      "name": "orange county"
+    }
+  },
+  {
+    "pk": 254,
+    "model": "core.city",
+    "fields": {
+      "iata_code": "AUA",
+      "name": "oranjestad"
+    }
+  },
+  {
+    "pk": 255,
+    "model": "core.city",
+    "fields": {
+      "iata_code": "ORL",
+      "name": "orlando"
+    }
+  },
+  {
+    "pk": 256,
+    "model": "core.city",
+    "fields": {
+      "iata_code": "OSA",
+      "name": "osaka"
+    }
+  },
+  {
+    "pk": 257,
+    "model": "core.city",
+    "fields": {
+      "iata_code": "OSI",
+      "name": "osijek"
+    }
+  },
+  {
+    "pk": 258,
+    "model": "core.city",
+    "fields": {
+      "iata_code": "OSL",
+      "name": "oslo"
+    }
+  },
+  {
+    "pk": 259,
+    "model": "core.city",
+    "fields": {
+      "iata_code": "YOW",
+      "name": "ottawa"
+    }
+  },
+  {
+    "pk": 260,
+    "model": "core.city",
+    "fields": {
+      "iata_code": "OUA",
+      "name": "ouagadougou"
+    }
+  },
+  {
+    "pk": 261,
+    "model": "core.city",
+    "fields": {
+      "iata_code": "OVD",
+      "name": "oviedo"
+    }
+  },
+  {
+    "pk": 262,
+    "model": "core.city",
+    "fields": {
+      "iata_code": "PPG",
+      "name": "pago pago"
+    }
+  },
+  {
+    "pk": 263,
+    "model": "core.city",
+    "fields": {
+      "iata_code": "PMO",
+      "name": "palermo"
+    }
+  },
+  {
+    "pk": 264,
+    "model": "core.city",
+    "fields": {
+      "iata_code": "PMI",
+      "name": "palma de mallorca"
+    }
+  },
+  {
+    "pk": 265,
+    "model": "core.city",
+    "fields": {
+      "iata_code": "PMW",
+      "name": "palmas"
+    }
+  },
+  {
+    "pk": 266,
+    "model": "core.city",
+    "fields": {
+      "iata_code": "PSP",
+      "name": "palm springs"
+    }
+  },
+  {
+    "pk": 267,
+    "model": "core.city",
+    "fields": {
+      "iata_code": "PTY",
+      "name": "panama city"
+    }
+  },
+  {
+    "pk": 268,
+    "model": "core.city",
+    "fields": {
+      "iata_code": "PPT",
+      "name": "papeete"
+    }
+  },
+  {
+    "pk": 269,
+    "model": "core.city",
+    "fields": {
+      "iata_code": "PBM",
+      "name": "paramaribo"
+    }
+  },
+  {
+    "pk": 270,
+    "model": "core.city",
+    "fields": {
+      "iata_code": "PAR",
+      "name": "paris"
+    }
+  },
+  {
+    "pk": 271,
+    "model": "core.city",
+    "fields": {
+      "iata_code": "PBH",
+      "name": "paro"
+    }
+  },
+  {
+    "pk": 272,
+    "model": "core.city",
+    "fields": {
+      "iata_code": "PER",
+      "name": "perth"
+    }
+  },
+  {
+    "pk": 273,
+    "model": "core.city",
+    "fields": {
+      "iata_code": "PEG",
+      "name": "perugia"
+    }
+  },
+  {
+    "pk": 274,
+    "model": "core.city",
+    "fields": {
+      "iata_code": "PHL",
+      "name": "philadelphia"
+    }
+  },
+  {
+    "pk": 275,
+    "model": "core.city",
+    "fields": {
+      "iata_code": "PNH",
+      "name": "phnom penh"
+    }
+  },
+  {
+    "pk": 276,
+    "model": "core.city",
+    "fields": {
+      "iata_code": "PHX",
+      "name": "phoenix"
+    }
+  },
+  {
+    "pk": 277,
+    "model": "core.city",
+    "fields": {
+      "iata_code": "HKT",
+      "name": "phuket"
+    }
+  },
+  {
+    "pk": 278,
+    "model": "core.city",
+    "fields": {
+      "iata_code": "PTG",
+      "name": "pietersburg"
+    }
+  },
+  {
+    "pk": 279,
+    "model": "core.city",
+    "fields": {
+      "iata_code": "PSA",
+      "name": "pisa"
+    }
+  },
+  {
+    "pk": 280,
+    "model": "core.city",
+    "fields": {
+      "iata_code": "PIT",
+      "name": "pittsburgh"
+    }
+  },
+  {
+    "pk": 281,
+    "model": "core.city",
+    "fields": {
+      "iata_code": "TGD",
+      "name": "podgorica"
+    }
+  },
+  {
+    "pk": 282,
+    "model": "core.city",
+    "fields": {
+      "iata_code": "PNI",
+      "name": "pohnpei"
+    }
+  },
+  {
+    "pk": 283,
+    "model": "core.city",
+    "fields": {
+      "iata_code": "PTP",
+      "name": "pointe a pitre"
+    }
+  },
+  {
+    "pk": 284,
+    "model": "core.city",
+    "fields": {
+      "iata_code": "PAP",
+      "name": "port au prince"
+    }
+  },
+  {
+    "pk": 285,
+    "model": "core.city",
+    "fields": {
+      "iata_code": "PLZ",
+      "name": "port elizabeth"
+    }
+  },
+  {
+    "pk": 286,
+    "model": "core.city",
+    "fields": {
+      "iata_code": "PDX",
+      "name": "portland"
+    }
+  },
+  {
+    "pk": 287,
+    "model": "core.city",
+    "fields": {
+      "iata_code": "POA",
+      "name": "porto alegre"
+    }
+  },
+  {
+    "pk": 288,
+    "model": "core.city",
+    "fields": {
+      "iata_code": "POS",
+      "name": "port of spain"
+    }
+  },
+  {
+    "pk": 289,
+    "model": "core.city",
+    "fields": {
+      "iata_code": "PSD",
+      "name": "port said"
+    }
+  },
+  {
+    "pk": 290,
+    "model": "core.city",
+    "fields": {
+      "iata_code": "POZ",
+      "name": "poznan"
+    }
+  },
+  {
+    "pk": 291,
+    "model": "core.city",
+    "fields": {
+      "iata_code": "PRG",
+      "name": "prague"
+    }
+  },
+  {
+    "pk": 292,
+    "model": "core.city",
+    "fields": {
+      "iata_code": "RAI",
+      "name": "praia"
+    }
+  },
+  {
+    "pk": 293,
+    "model": "core.city",
+    "fields": {
+      "iata_code": "PRN",
+      "name": "pristina"
+    }
+  },
+  {
+    "pk": 294,
+    "model": "core.city",
+    "fields": {
+      "iata_code": "PVD",
+      "name": "providence"
+    }
+  },
+  {
+    "pk": 295,
+    "model": "core.city",
+    "fields": {
+      "iata_code": "PUY",
+      "name": "pula"
+    }
+  },
+  {
+    "pk": 296,
+    "model": "core.city",
+    "fields": {
+      "iata_code": "PUS",
+      "name": "pu san"
+    }
+  },
+  {
+    "pk": 297,
+    "model": "core.city",
+    "fields": {
+      "iata_code": "FNJ",
+      "name": "pyongyang"
+    }
+  },
+  {
+    "pk": 298,
+    "model": "core.city",
+    "fields": {
+      "iata_code": "YBQ",
+      "name": "quebec"
+    }
+  },
+  {
+    "pk": 299,
+    "model": "core.city",
+    "fields": {
+      "iata_code": "UIO",
+      "name": "quito"
+    }
+  },
+  {
+    "pk": 300,
+    "model": "core.city",
+    "fields": {
+      "iata_code": "RBA",
+      "name": "rabat"
+    }
+  },
+  {
+    "pk": 301,
+    "model": "core.city",
+    "fields": {
+      "iata_code": "RAJ",
+      "name": "rajkot"
+    }
+  },
+  {
+    "pk": 302,
+    "model": "core.city",
+    "fields": {
+      "iata_code": "RGN",
+      "name": "rangoon"
+    }
+  },
+  {
+    "pk": 303,
+    "model": "core.city",
+    "fields": {
+      "iata_code": "REC",
+      "name": "recife"
+    }
+  },
+  {
+    "pk": 304,
+    "model": "core.city",
+    "fields": {
+      "iata_code": "TFS",
+      "name": "reina sofia"
+    }
+  },
+  {
+    "pk": 305,
+    "model": "core.city",
+    "fields": {
+      "iata_code": "RNS",
+      "name": "rennes"
+    }
+  },
+  {
+    "pk": 306,
+    "model": "core.city",
+    "fields": {
+      "iata_code": "REK",
+      "name": "reykjavik"
+    }
+  },
+  {
+    "pk": 307,
+    "model": "core.city",
+    "fields": {
+      "iata_code": "RHO",
+      "name": "rhodos"
+    }
+  },
+  {
+    "pk": 308,
+    "model": "core.city",
+    "fields": {
+      "iata_code": "RIC",
+      "name": "richmond"
+    }
+  },
+  {
+    "pk": 309,
+    "model": "core.city",
+    "fields": {
+      "iata_code": "RIX",
+      "name": "riga"
+    }
+  },
+  {
+    "pk": 310,
+    "model": "core.city",
+    "fields": {
+      "iata_code": "RJK",
+      "name": "rijeka"
+    }
+  },
+  {
+    "pk": 311,
+    "model": "core.city",
+    "fields": {
+      "iata_code": "RMI",
+      "name": "rimini"
+    }
+  },
+  {
+    "pk": 312,
+    "model": "core.city",
+    "fields": {
+      "iata_code": "RBR",
+      "name": "rio branco"
+    }
+  },
+  {
+    "pk": 313,
+    "model": "core.city",
+    "fields": {
+      "iata_code": "GIG",
+      "name": "rio de janeiro"
+    }
+  },
+  {
+    "pk": 314,
+    "model": "core.city",
+    "fields": {
+      "iata_code": "RUH",
+      "name": "riyadh"
+    }
+  },
+  {
+    "pk": 315,
+    "model": "core.city",
+    "fields": {
+      "iata_code": "RNE",
+      "name": "roanne"
+    }
+  },
+  {
+    "pk": 316,
+    "model": "core.city",
+    "fields": {
+      "iata_code": "RTB",
+      "name": "roatan"
+    }
+  },
+  {
+    "pk": 317,
+    "model": "core.city",
+    "fields": {
+      "iata_code": "ROC",
+      "name": "rochester"
+    }
+  },
+  {
+    "pk": 318,
+    "model": "core.city",
+    "fields": {
+      "iata_code": "RNN",
+      "name": "roenne"
+    }
+  },
+  {
+    "pk": 319,
+    "model": "core.city",
+    "fields": {
+      "iata_code": "ROM",
+      "name": "rome"
+    }
+  },
+  {
+    "pk": 320,
+    "model": "core.city",
+    "fields": {
+      "iata_code": "RTM",
+      "name": "rotterdam"
+    }
+  },
+  {
+    "pk": 321,
+    "model": "core.city",
+    "fields": {
+      "iata_code": "SCN",
+      "name": "saarbruecken"
+    }
+  },
+  {
+    "pk": 322,
+    "model": "core.city",
+    "fields": {
+      "iata_code": "SMF",
+      "name": "sacramento"
+    }
+  },
+  {
+    "pk": 323,
+    "model": "core.city",
+    "fields": {
+      "iata_code": "SGN",
+      "name": "saigon"
+    }
+  },
+  {
+    "pk": 324,
+    "model": "core.city",
+    "fields": {
+      "iata_code": "SPN",
+      "name": "saipan"
+    }
+  },
+  {
+    "pk": 325,
+    "model": "core.city",
+    "fields": {
+      "iata_code": "SLE",
+      "name": "salem"
+    }
+  },
+  {
+    "pk": 326,
+    "model": "core.city",
+    "fields": {
+      "iata_code": "SNC",
+      "name": "salinas"
+    }
+  },
+  {
+    "pk": 327,
+    "model": "core.city",
+    "fields": {
+      "iata_code": "SKG",
+      "name": "saloniki"
+    }
+  },
+  {
+    "pk": 328,
+    "model": "core.city",
+    "fields": {
+      "iata_code": "SLC",
+      "name": "salt lake city"
+    }
+  },
+  {
+    "pk": 329,
+    "model": "core.city",
+    "fields": {
+      "iata_code": "SSA",
+      "name": "salvador"
+    }
+  },
+  {
+    "pk": 330,
+    "model": "core.city",
+    "fields": {
+      "iata_code": "SZG",
+      "name": "salzburg"
+    }
+  },
+  {
+    "pk": 331,
+    "model": "core.city",
+    "fields": {
+      "iata_code": "SKD",
+      "name": "samarkand"
+    }
+  },
+  {
+    "pk": 332,
+    "model": "core.city",
+    "fields": {
+      "iata_code": "SAT",
+      "name": "san antonio"
+    }
+  },
+  {
+    "pk": 333,
+    "model": "core.city",
+    "fields": {
+      "iata_code": "SJO",
+      "name": "san jose"
+    }
+  },
+  {
+    "pk": 334,
+    "model": "core.city",
+    "fields": {
+      "iata_code": "SAP",
+      "name": "san pedro sula"
+    }
+  },
+  {
+    "pk": 335,
+    "model": "core.city",
+    "fields": {
+      "iata_code": "SAL",
+      "name": "san salvador"
+    }
+  },
+  {
+    "pk": 336,
+    "model": "core.city",
+    "fields": {
+      "iata_code": "ROM",
+      "name": "san sebastian"
+    }
+  },
+  {
+    "pk": 337,
+    "model": "core.city",
+    "fields": {
+      "iata_code": "SAH",
+      "name": "sanaa"
+    }
+  },
+  {
+    "pk": 338,
+    "model": "core.city",
+    "fields": {
+      "iata_code": "SBA",
+      "name": "santa barbara"
+    }
+  },
+  {
+    "pk": 339,
+    "model": "core.city",
+    "fields": {
+      "iata_code": "SMA",
+      "name": "santa maria"
+    }
+  },
+  {
+    "pk": 340,
+    "model": "core.city",
+    "fields": {
+      "iata_code": "SCU",
+      "name": "santiago"
+    }
+  },
+  {
+    "pk": 341,
+    "model": "core.city",
+    "fields": {
+      "iata_code": "SCL",
+      "name": "santiago de chile"
+    }
+  },
+  {
+    "pk": 342,
+    "model": "core.city",
+    "fields": {
+      "iata_code": "SDQ",
+      "name": "santo domingo"
+    }
+  },
+  {
+    "pk": 343,
+    "model": "core.city",
+    "fields": {
+      "iata_code": "SLZ",
+      "name": "sao luis"
+    }
+  },
+  {
+    "pk": 344,
+    "model": "core.city",
+    "fields": {
+      "iata_code": "SAO",
+      "name": "sao paulo"
+    }
+  },
+  {
+    "pk": 345,
+    "model": "core.city",
+    "fields": {
+      "iata_code": "TMS",
+      "name": "sao tome"
+    }
+  },
+  {
+    "pk": 346,
+    "model": "core.city",
+    "fields": {
+      "iata_code": "CTS",
+      "name": "sapporo"
+    }
+  },
+  {
+    "pk": 347,
+    "model": "core.city",
+    "fields": {
+      "iata_code": "SJJ",
+      "name": "sarajevo"
+    }
+  },
+  {
+    "pk": 348,
+    "model": "core.city",
+    "fields": {
+      "iata_code": "SAV",
+      "name": "savannah"
+    }
+  },
+  {
+    "pk": 349,
+    "model": "core.city",
+    "fields": {
+      "iata_code": "SEA",
+      "name": "seattle"
+    }
+  },
+  {
+    "pk": 350,
+    "model": "core.city",
+    "fields": {
+      "iata_code": "SEL",
+      "name": "seoul"
+    }
+  },
+  {
+    "pk": 351,
+    "model": "core.city",
+    "fields": {
+      "iata_code": "SVQ",
+      "name": "sevilla"
+    }
+  },
+  {
+    "pk": 352,
+    "model": "core.city",
+    "fields": {
+      "iata_code": "SHA",
+      "name": "shanghai"
+    }
+  },
+  {
+    "pk": 353,
+    "model": "core.city",
+    "fields": {
+      "iata_code": "SSH",
+      "name": "sharm el sheikh"
+    }
+  },
+  {
+    "pk": 354,
+    "model": "core.city",
+    "fields": {
+      "iata_code": "SZD",
+      "name": "sheffield"
+    }
+  },
+  {
+    "pk": 355,
+    "model": "core.city",
+    "fields": {
+      "iata_code": "SHR",
+      "name": "sheridan"
+    }
+  },
+  {
+    "pk": 356,
+    "model": "core.city",
+    "fields": {
+      "iata_code": "SDY",
+      "name": "sidney"
+    }
+  },
+  {
+    "pk": 357,
+    "model": "core.city",
+    "fields": {
+      "iata_code": "SIN",
+      "name": "singapore"
+    }
+  },
+  {
+    "pk": 358,
+    "model": "core.city",
+    "fields": {
+      "iata_code": "JSI",
+      "name": "skiathos"
+    }
+  },
+  {
+    "pk": 359,
+    "model": "core.city",
+    "fields": {
+      "iata_code": "SKP",
+      "name": "skopje"
+    }
+  },
+  {
+    "pk": 360,
+    "model": "core.city",
+    "fields": {
+      "iata_code": "SOF",
+      "name": "sofia"
+    }
+  },
+  {
+    "pk": 361,
+    "model": "core.city",
+    "fields": {
+      "iata_code": "SOU",
+      "name": "southampton"
+    }
+  },
+  {
+    "pk": 362,
+    "model": "core.city",
+    "fields": {
+      "iata_code": "SPU",
+      "name": "split"
+    }
+  },
+  {
+    "pk": 363,
+    "model": "core.city",
+    "fields": {
+      "iata_code": "SPI",
+      "name": "springfield"
+    }
+  },
+  {
+    "pk": 364,
+    "model": "core.city",
+    "fields": {
+      "iata_code": "STO",
+      "name": "stockholm"
+    }
+  },
+  {
+    "pk": 365,
+    "model": "core.city",
+    "fields": {
+      "iata_code": "SXB",
+      "name": "strassburg"
+    }
+  },
+  {
+    "pk": 366,
+    "model": "core.city",
+    "fields": {
+      "iata_code": "STR",
+      "name": "stuttgart"
+    }
+  },
+  {
+    "pk": 367,
+    "model": "core.city",
+    "fields": {
+      "iata_code": "SUB",
+      "name": "surabaya"
+    }
+  },
+  {
+    "pk": 368,
+    "model": "core.city",
+    "fields": {
+      "iata_code": "SYD",
+      "name": "sydney"
+    }
+  },
+  {
+    "pk": 369,
+    "model": "core.city",
+    "fields": {
+      "iata_code": "TPE",
+      "name": "taipei"
+    }
+  },
+  {
+    "pk": 370,
+    "model": "core.city",
+    "fields": {
+      "iata_code": "TLH",
+      "name": "tallahassee"
+    }
+  },
+  {
+    "pk": 371,
+    "model": "core.city",
+    "fields": {
+      "iata_code": "TLL",
+      "name": "tallin"
+    }
+  },
+  {
+    "pk": 372,
+    "model": "core.city",
+    "fields": {
+      "iata_code": "TPA",
+      "name": "tampa"
+    }
+  },
+  {
+    "pk": 373,
+    "model": "core.city",
+    "fields": {
+      "iata_code": "TNG",
+      "name": "tangier"
+    }
+  },
+  {
+    "pk": 374,
+    "model": "core.city",
+    "fields": {
+      "iata_code": "TAS",
+      "name": "tashkent"
+    }
+  },
+  {
+    "pk": 375,
+    "model": "core.city",
+    "fields": {
+      "iata_code": "TBS",
+      "name": "tbilisi"
+    }
+  },
+  {
+    "pk": 376,
+    "model": "core.city",
+    "fields": {
+      "iata_code": "THR",
+      "name": "tehran"
+    }
+  },
+  {
+    "pk": 377,
+    "model": "core.city",
+    "fields": {
+      "iata_code": "TLV",
+      "name": "tel aviv"
+    }
+  },
+  {
+    "pk": 378,
+    "model": "core.city",
+    "fields": {
+      "iata_code": "TCI",
+      "name": "tenerife"
+    }
+  },
+  {
+    "pk": 379,
+    "model": "core.city",
+    "fields": {
+      "iata_code": "THE",
+      "name": "Teresina"
+    }
+  },
+  {
+    "pk": 380,
+    "model": "core.city",
+    "fields": {
+      "iata_code": "SKG",
+      "name": "thessaloniki"
+    }
+  },
+  {
+    "pk": 381,
+    "model": "core.city",
+    "fields": {
+      "iata_code": "TSN",
+      "name": "tianjin"
+    }
+  },
+  {
+    "pk": 382,
+    "model": "core.city",
+    "fields": {
+      "iata_code": "TIJ",
+      "name": "tijuana"
+    }
+  },
+  {
+    "pk": 383,
+    "model": "core.city",
+    "fields": {
+      "iata_code": "TIA",
+      "name": "tirana"
+    }
+  },
+  {
+    "pk": 384,
+    "model": "core.city",
+    "fields": {
+      "iata_code": "TIV",
+      "name": "tivat"
+    }
+  },
+  {
+    "pk": 385,
+    "model": "core.city",
+    "fields": {
+      "iata_code": "TAB",
+      "name": "tobago"
+    }
+  },
+  {
+    "pk": 386,
+    "model": "core.city",
+    "fields": {
+      "iata_code": "TYO",
+      "name": "tokyo"
+    }
+  },
+  {
+    "pk": 387,
+    "model": "core.city",
+    "fields": {
+      "iata_code": "YTO",
+      "name": "toronto"
+    }
+  },
+  {
+    "pk": 388,
+    "model": "core.city",
+    "fields": {
+      "iata_code": "TOV",
+      "name": "tortola"
+    }
+  },
+  {
+    "pk": 389,
+    "model": "core.city",
+    "fields": {
+      "iata_code": "TLS",
+      "name": "toulouse"
+    }
+  },
+  {
+    "pk": 390,
+    "model": "core.city",
+    "fields": {
+      "iata_code": "TSV",
+      "name": "townsville"
+    }
+  },
+  {
+    "pk": 391,
+    "model": "core.city",
+    "fields": {
+      "iata_code": "TTN",
+      "name": "trenton"
+    }
+  },
+  {
+    "pk": 392,
+    "model": "core.city",
+    "fields": {
+      "iata_code": "TSF",
+      "name": "treviso"
+    }
+  },
+  {
+    "pk": 393,
+    "model": "core.city",
+    "fields": {
+      "iata_code": "TRS",
+      "name": "trieste"
+    }
+  },
+  {
+    "pk": 394,
+    "model": "core.city",
+    "fields": {
+      "iata_code": "TIP",
+      "name": "tripoli"
+    }
+  },
+  {
+    "pk": 395,
+    "model": "core.city",
+    "fields": {
+      "iata_code": "TUS",
+      "name": "tucson"
+    }
+  },
+  {
+    "pk": 396,
+    "model": "core.city",
+    "fields": {
+      "iata_code": "TUL",
+      "name": "tulsa"
+    }
+  },
+  {
+    "pk": 397,
+    "model": "core.city",
+    "fields": {
+      "iata_code": "TUN",
+      "name": "tunis"
+    }
+  },
+  {
+    "pk": 398,
+    "model": "core.city",
+    "fields": {
+      "iata_code": "TRN",
+      "name": "turin"
+    }
+  },
+  {
+    "pk": 399,
+    "model": "core.city",
+    "fields": {
+      "iata_code": "UDE",
+      "name": "uden"
+    }
+  },
+  {
+    "pk": 400,
+    "model": "core.city",
+    "fields": {
+      "iata_code": "ULN",
+      "name": "ulaanbaatar"
+    }
+  },
+  {
+    "pk": 401,
+    "model": "core.city",
+    "fields": {
+      "iata_code": "ULB",
+      "name": "ulei"
+    }
+  },
+  {
+    "pk": 402,
+    "model": "core.city",
+    "fields": {
+      "iata_code": "ULD",
+      "name": "ulundi"
+    }
+  },
+  {
+    "pk": 403,
+    "model": "core.city",
+    "fields": {
+      "iata_code": "SAV",
+      "name": "union island"
+    }
+  },
+  {
+    "pk": 404,
+    "model": "core.city",
+    "fields": {
+      "iata_code": "UPL",
+      "name": "upala"
+    }
+  },
+  {
+    "pk": 405,
+    "model": "core.city",
+    "fields": {
+      "iata_code": "URM",
+      "name": "uriman"
+    }
+  },
+  {
+    "pk": 406,
+    "model": "core.city",
+    "fields": {
+      "iata_code": "UII",
+      "name": "utila"
+    }
+  },
+  {
+    "pk": 407,
+    "model": "core.city",
+    "fields": {
+      "iata_code": "VA",
+      "name": "vaasa"
+    }
+  },
+  {
+    "pk": 408,
+    "model": "core.city",
+    "fields": {
+      "iata_code": "VLC",
+      "name": "valencia"
+    }
+  },
+  {
+    "pk": 409,
+    "model": "core.city",
+    "fields": {
+      "iata_code": "VDE",
+      "name": "valverde"
+    }
+  },
+  {
+    "pk": 410,
+    "model": "core.city",
+    "fields": {
+      "iata_code": "YVR",
+      "name": "vancouver"
+    }
+  },
+  {
+    "pk": 411,
+    "model": "core.city",
+    "fields": {
+      "iata_code": "VAR",
+      "name": "varna"
+    }
+  },
+  {
+    "pk": 412,
+    "model": "core.city",
+    "fields": {
+      "iata_code": "VCE",
+      "name": "venice"
+    }
+  },
+  {
+    "pk": 413,
+    "model": "core.city",
+    "fields": {
+      "iata_code": "VRN",
+      "name": "verona"
+    }
+  },
+  {
+    "pk": 414,
+    "model": "core.city",
+    "fields": {
+      "iata_code": "VFA",
+      "name": "victoria falls"
+    }
+  },
+  {
+    "pk": 415,
+    "model": "core.city",
+    "fields": {
+      "iata_code": "VID",
+      "name": "vidin"
+    }
+  },
+  {
+    "pk": 416,
+    "model": "core.city",
+    "fields": {
+      "iata_code": "VTE",
+      "name": "vientian"
+    }
+  },
+  {
+    "pk": 417,
+    "model": "core.city",
+    "fields": {
+      "iata_code": "VGO",
+      "name": "vigo"
+    }
+  },
+  {
+    "pk": 418,
+    "model": "core.city",
+    "fields": {
+      "iata_code": "VNO",
+      "name": "vilnius"
+    }
+  },
+  {
+    "pk": 419,
+    "model": "core.city",
+    "fields": {
+      "iata_code": "VIX",
+      "name": "vitoria"
+    }
+  },
+  {
+    "pk": 420,
+    "model": "core.city",
+    "fields": {
+      "iata_code": "WAW",
+      "name": "warsaw"
+    }
+  },
+  {
+    "pk": 421,
+    "model": "core.city",
+    "fields": {
+      "iata_code": "WAS",
+      "name": "washington dc"
+    }
+  },
+  {
+    "pk": 422,
+    "model": "core.city",
+    "fields": {
+      "iata_code": "ALO",
+      "name": "waterloo"
+    }
+  },
+  {
+    "pk": 423,
+    "model": "core.city",
+    "fields": {
+      "iata_code": "WLG",
+      "name": "wellington"
+    }
+  },
+  {
+    "pk": 424,
+    "model": "core.city",
+    "fields": {
+      "iata_code": "GWT",
+      "name": "westerland"
+    }
+  },
+  {
+    "pk": 425,
+    "model": "core.city",
+    "fields": {
+      "iata_code": "HPN",
+      "name": "white plains"
+    }
+  },
+  {
+    "pk": 426,
+    "model": "core.city",
+    "fields": {
+      "iata_code": "ICT",
+      "name": "wichita"
+    }
+  },
+  {
+    "pk": 427,
+    "model": "core.city",
+    "fields": {
+      "iata_code": "WHM",
+      "name": "wickham"
+    }
+  },
+  {
+    "pk": 428,
+    "model": "core.city",
+    "fields": {
+      "iata_code": "VIE",
+      "name": "wien"
+    }
+  },
+  {
+    "pk": 429,
+    "model": "core.city",
+    "fields": {
+      "iata_code": "WIE",
+      "name": "wiesbaden"
+    }
+  },
+  {
+    "pk": 430,
+    "model": "core.city",
+    "fields": {
+      "iata_code": "VNO",
+      "name": "wilna"
+    }
+  },
+  {
+    "pk": 431,
+    "model": "core.city",
+    "fields": {
+      "iata_code": "ERS",
+      "name": "windhoek"
+    }
+  },
+  {
+    "pk": 432,
+    "model": "core.city",
+    "fields": {
+      "iata_code": "ASK",
+      "name": "yamoussoukro"
+    }
+  },
+  {
+    "pk": 433,
+    "model": "core.city",
+    "fields": {
+      "iata_code": "RGN",
+      "name": "yangon"
+    }
+  },
+  {
+    "pk": 434,
+    "model": "core.city",
+    "fields": {
+      "iata_code": "YAO",
+      "name": "yaounde"
+    }
+  },
+  {
+    "pk": 435,
+    "model": "core.city",
+    "fields": {
+      "iata_code": "YOK",
+      "name": "yokohama"
+    }
+  },
+  {
+    "pk": 436,
+    "model": "core.city",
+    "fields": {
+      "iata_code": "ZAD",
+      "name": "zadar"
+    }
+  },
+  {
+    "pk": 437,
+    "model": "core.city",
+    "fields": {
+      "iata_code": "ZAG",
+      "name": "zagreb"
+    }
+  },
+  {
+    "pk": 438,
+    "model": "core.city",
+    "fields": {
+      "iata_code": "ZTH",
+      "name": "zakynthos"
+    }
+  },
+  {
+    "pk": 439,
+    "model": "core.city",
+    "fields": {
+      "iata_code": "ZND",
+      "name": "zinder"
+    }
+  },
+  {
+    "pk": 440,
+    "model": "core.city",
+    "fields": {
+      "iata_code": "ZRH",
+      "name": "zurich"
+    }
   }
 ]
