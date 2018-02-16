@@ -3,6 +3,11 @@ body {
     font-family: 'Pacifico', cursive;
 }
 
+h2 {
+    text-align:center;
+    font-family: 'Pacifico', cursive;
+}
+
 textarea {
     resize: none;
 }
@@ -20,12 +25,19 @@ textarea {
 }
 
 .btn-search {
-    
     background-color: #ffd700;
 }
 
 .error {
   color: red;
+}
+
+.info {
+    font-size: 20px;
+}
+
+.tr-heading {
+    background-color: #ffd700;
 }
 
 

@@ -7,7 +7,7 @@
         <div class="container">
             <table class="table table-hover">
                 <thead>
-                    <tr>
+                    <tr class="tr-heading">
                         <th>Airline</th>
                         <th>Ticket class</th>
                         <th>Price per person</th>
@@ -29,7 +29,7 @@
 
 
     {% else %}
-        <p>There are no flights that match your query. Please, try again.</p>
+        <p class="info">There are no flights that match your query. Please, try again.</p>
     {% endif %}
 {% endblock%}
 
