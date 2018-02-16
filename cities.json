@@ -1875,7 +1875,7 @@
     "pk": 235,
     "model": "core.city",
     "fields": {
-      "iata_code": "JFK",
+      "iata_code": "NYC",
       "name": "new york"
     }
   },
@@ -3420,7 +3420,7 @@
     "model": "core.city",
     "fields": {
       "iata_code": "VIE",
-      "name": "wien"
+      "name": "vienna"
     }
   },
   {

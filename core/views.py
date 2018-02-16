@@ -1,5 +1,5 @@
 import requests
-from django.shortcuts import render
+from django.shortcuts import render, render_to_response
 from django.views import View
 
 from TransportTracker.grammar.query import TicketQuery
@@ -9,6 +9,7 @@ from textx.exceptions import TextXSyntaxError, TextXSemanticError
 import os
 from TransportTracker.settings import BASE_DIR
 from TransportTracker.execute.execute import execute_for_web
+from core.generation.generator import generate
 from core.models import City
 
 
@@ -79,16 +80,21 @@ class QueryFormView(View):
             if flights_url != "":
                 flights_response = requests.get(flights_url).json()
                 filtered_flights = []
-                for flight in flights_response['results']:
-                    if model.ticket_class.Class in flight['travel_class'].lower():
-                        filtered_flights.append(flight)
+                if 'results' in flights_response:
+                    for flight in flights_response['results']:
+                        if model.ticket_class.Class in flight['travel_class'].lower():
+                            filtered_flights.append(flight)
+
+                generate("results_template.html", "results.html", {"filtered_flights": filtered_flights,
+                                                                    "from": model.From.departure_city,
+                                                                    "to": model.to.arrival_city})
 
         except TextXSyntaxError as error:
             return render(request, self.template_name, {'form': form, 'error_message': syntax_error_message(str(error))})
         except TextXSemanticError as error:
             return render(request, self.template_name, {'form': form, 'error_message': error})
 
-        return render(request, self.template_name, {'form': form, 'error_message': ''})
+        return render(request, 'core/results.html')
 
 
 def syntax_error_message(error):
