@@ -5,7 +5,7 @@
     <title>{% block title %}Welcome{% endblock %}</title>
 
     {% load staticfiles %}
-    <link rel="shortcut icon" type="image/png" href="{% static 'images/icon.png' %}"/>
+    <link rel="shortcut icon" type="image/png" href="{% static 'core/images/icon.png' %}"/>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
@@ -30,14 +30,102 @@
             <div class = "collapse navbar-collapse" id = "topNavBar">
                 <ul class = "nav navbar-nav navbar-right">
                     <li>
-                        <a href="#">
-                            <span class="glyphicon glyphicon-book" aria-hidden = "true"></span>&nbsp; Grammar
-                        </a>
+                        <a href="#help-modal" data-toggle="modal" data-target="#help-modal"><span class="glyphicon glyphicon-book" aria-hidden = "true"><span class="link">&nbsp;Help</span></span></a>
+                    </li>
+                    <li>
+                        <a href="#example-modal" data-toggle="modal" data-target="#example-modal"><span class="glyphicon glyphicon-th-large" aria-hidden = "true"><span class="link">&nbsp;Examples</span></span></a>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
+
+
+    <!-- Modal -->
+    <div id="help-modal" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header my-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title" align="center">Help</h4>
+            </div>
+            <div class="modal-body">
+                <p>Search text is not predefined.
+                    User can write whatever he wants but query elements must be specified in the following order:</p>
+                <ol>
+                    <li>Number of tickets</li>
+                    <li>Ticket type</li>
+                    <li>Ticket class (only for plane and train tickets)</li>
+                    <li>Transport type</li>
+                    <li>Departure and arrival cities</li>
+                    <li>Departure date</li>
+                    <li>Return date (only for round-trip tickets)</li>
+                    <li>Max price per person and currency (optional)</li>
+                </ol>
+
+                <h4>Number of tickets</h4>
+                <p>Must be a positive number. It cannot be written in letters, only digits are accepted as valid number.</p>
+
+                <h4>Ticket type</h4>
+                <p>User must define whether he needs a one-way ticket or a round-trip ticket.</p>
+
+                <h4>Ticket class</h4>
+                <p>Depends on the mean of transport.
+                    For plane it may be economy or business class.
+                    Train classes are: first, second, couchette.</p>
+
+                <h4>Transport type</h4>
+                <p>Means of transport are plane, bus or train.</p>
+
+                <h4>Departure and arrival cities</h4>
+                <p>Order of these cities is not imposed.
+                    Keyword for departure city is from and for arrival city is to. Valid city names contain only letters. If a city name contains more than one word you should separate them with - instead of whitespace.</p>
+
+                <h4>Departure date</h4>
+                <p>Key word for this date is on. Accepted date formats are: dd/mm/yyyy and dd.mm.yyyy</p>
+
+                <h4>Return date</h4>
+                <p>Key word for this date is return. Accepted date formats are: dd/mm/yyyy and dd.mm.yyyy</p>
+
+                <h4>Max price and currency</h4>
+                <p>If you wish to limit maximum ticket price you should specify your upper price limit. Keyword you must use is price. It cannot be written in letters, only digits are accepted as valid price.
+                    You should also specify price currency. Avaliable currencies are EUR, RSD and USD.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="example-modal" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header my-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title" align="center">Examples</h4>
+            </div>
+            <div class="modal-body">
+                <h4>Valid plane queries</h4>
+                <ul>
+                    <li>I need <b>2 one-way economy</b> class <b>plane</b> tickets <b>from</b> Manchester <b>to</b> Amsterdam <b>on</b> 19/02/2018. Maximum ticket <b>price</b> is 400 <b>eur</b>.</li>
+                    <li>I would like to buy <b>2 round-trip</b> tickets. Desired class is <b>economy</b>. I want to travel by  <b>plane  from</b> Belgrade <b>to</b> Milan <b>on</b> 15/03/2018 with the <b>return</b> date 20/03/2018.</li>
+                </ul>
+                <h4>Valid train queries</h4>
+                <ul>
+                    <li>We want <b>5 one-way first</b> class <b>train</b> tickets <b>from</b> Vienna <b>to</b> Prague <b>on</b> 03/06/2018. Maximum ticket <b>price</b> is 20 <b>usd</b>.</li>
+                    <li>We want <b>3 round-trip second</b> class <b>train</b> tickets <b>from</b> Paris <b>to</b> Lyon <b>on</b> 01/04/2018. I want to <b>return</b> on the 06/04/2018.</li>
+                </ul>
+                <h4>Valid bus queries</h4>
+                <ul>
+                    <li>We want <b>1 one-way bus</b> ticket <b>from</b> Vienna <b>to</b> Novi<b>-</b>Sad <b>on</b> 03/06/2018. Maximum ticket <b>price</b> is 10000 <b>rsd</b>.</li>
+                </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
     {% block body %}
     {% endblock %}
 

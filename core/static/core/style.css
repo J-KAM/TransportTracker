@@ -1,6 +1,5 @@
 body {
     background: white url("images/image.jpg");
-    font-family: 'Pacifico', cursive;
 }
 
 h2 {
@@ -12,8 +11,13 @@ textarea {
     resize: none;
 }
 
+b {
+    color: red;
+}
+
 .navbar-brand {
     font-size: 20px;
+    font-family: 'Pacifico', cursive;
 }
 
 .navbar {
@@ -22,10 +26,12 @@ textarea {
 
 .text {
     font-size: 20px;
+    font-family: 'Pacifico', cursive;
 }
 
 .btn-search {
     background-color: #ffd700;
+    font-family: 'Pacifico', cursive;
 }
 
 .error {
@@ -36,8 +42,18 @@ textarea {
     font-size: 20px;
 }
 
+.link {
+    font-family: 'Pacifico', cursive;
+}
+
 .tr-heading {
     background-color: #ffd700;
+    font-family: 'Pacifico', cursive;
+}
+
+.my-header {
+    background-color: #ffd700;
+    font-family: 'Pacifico', cursive;
 }
 
 
