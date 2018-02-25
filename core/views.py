@@ -9,7 +9,6 @@ from textx.exceptions import TextXSyntaxError, TextXSemanticError
 import os
 from TransportTracker.settings import BASE_DIR
 from TransportTracker.execute.execute import execute_for_web
-from core.generation.generator import generate
 from core.models import City
 
 
@@ -87,16 +86,15 @@ class QueryFormView(View):
                         if model.ticket_class.Class in flight['travel_class'].lower():
                             filtered_flights.append(flight)
 
-                generate("results_template.html", "results.html", {"filtered_flights": filtered_flights,
-                                                                    "from": model.From.departure_city,
-                                                                    "to": model.to.arrival_city})
-
         except TextXSyntaxError as error:
             return render(request, self.template_name, {'form': form, 'error_message': syntax_error_message(str(error))})
         except TextXSemanticError as error:
             return render(request, self.template_name, {'form': form, 'error_message': error})
 
-        return render(request, 'core/results.html')
+        return render(request, 'core/flight_results.html', {"from": model.From.departure_city.capitalize(),
+                                                            "to": model.to.arrival_city.capitalize(),
+                                                            "mot": model.transport_type.transport,
+                                                            "filtered_flights": filtered_flights})
 
 
 def syntax_error_message(error):
@@ -122,3 +120,5 @@ def syntax_error_message(error):
         return "Date isn't valid. Expected date format is DD.MM.YYYY or DD/MM/YYYY."
     elif error.startswith("Expected '/' or '.'"):
         return "Date isn't valid. Expected date format is DD.MM.YYYY or DD/MM/YYYY."
+
+

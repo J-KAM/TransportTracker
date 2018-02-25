@@ -1,0 +1,52 @@
+{% extends "core/base.html" %}
+{% load flight_filters %}
+
+{% block title %}Flight results{% endblock %}
+
+{% block body %}
+    {% if mot == 'plane' %}
+        <h2>Flights from {{ from }} to {{ to }}</h2>
+
+        {% if filtered_flights %}
+            <div class="container">
+                <table class="table table-hover">
+                    <thead>
+                        <tr class="tr-heading">
+                            <th>Airline</th>
+                            <th>Ticket class</th>
+                            <th>Price per person</th>
+                            <th>Total price</th>
+                            <th>Flight type</th>
+                            <th>Departure</th>
+                            <th>Arrival</th>
+                            <th>Duration</th>
+                            <th> &nbsp;</th>
+                        </tr>
+                </thead>
+            <tbody>
+                {% for flight in filtered_flights %}
+                    <tr>
+                        <td>{{ flight.airline }}</td>
+                        <td>{{ flight.travel_class.lower }}</td>
+                        <td>{{ flight.fare.price_per_adult.total_fare }} {{ flightfare.currency }}</td>
+                        <td>{{ flight.fare.total_price }} {{ flightfare.currency }}</td>
+                        <td>{{ flight.outbound.flights | flight_type }}</td>
+                        <td>{{ flight.outbound.flights | departure }}</td>
+                        <td>{{ flight.outbound.flights | arrival }}</td>
+                        <td>{{ flight.outbound.duration }}</td>
+                        <td><a href="{{ flight.deep_link }}"> Book </a></td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+
+        {% else %}
+            <p class="info">There are no flights that match your query. Please, try again.</p>
+        {% endif %}
+
+    {% else %}
+        <p class="info">Searches for bus and train are not currently available.</p>
+    {% endif %}
+{% endblock%}
