@@ -1,5 +1,5 @@
 import requests
-from django.shortcuts import render, render_to_response
+from django.shortcuts import render
 from django.views import View
 
 from TransportTracker.grammar.query import TicketQuery
@@ -50,12 +50,13 @@ class QueryFormView(View):
 
             if model.ticket_type.type == 'round-trip':
                 if model.price is not None:
+                    total_price = int(model.number_of_tickets.number) * int(model.price.price)
                     flights_url = 'https://api.sandbox.amadeus.com/v1.2/flights/affiliate-search?apikey=rWjxYGjkHiSxAwDXK0LF1a5LNmtAYZ2z&origin=' + departure_city_code + \
                                   '&destination=' + arrival_city_code + \
                                   '&departure_date=' + model.on.departure_date + \
                                   '&return_date=' + model.return_date.return_date + \
                                   '&adults=' + model.number_of_tickets.number +\
-                                  '&max_price=' + model.price.price + \
+                                  '&max_price=' + str(total_price) + \
                                   '&currency=' + model.currency.currency
                 else:
                     flights_url = 'https://api.sandbox.amadeus.com/v1.2/flights/affiliate-search?apikey=rWjxYGjkHiSxAwDXK0LF1a5LNmtAYZ2z&origin=' + departure_city_code + \
@@ -65,11 +66,12 @@ class QueryFormView(View):
                                   '&adults=' + model.number_of_tickets.number
             else:
                 if model.price is not None:
+                    total_price = int( model.number_of_tickets.number) * int(model.price.price)
                     flights_url = 'https://api.sandbox.amadeus.com/v1.2/flights/affiliate-search?apikey=rWjxYGjkHiSxAwDXK0LF1a5LNmtAYZ2z&origin=' + departure_city_code + \
                                   '&destination=' + arrival_city_code + \
                                   '&departure_date=' + model.on.departure_date + \
                                   '&adults=' + model.number_of_tickets.number +\
-                                  '&max_price=' + model.price.price + \
+                                  '&max_price=' + str(total_price) + \
                                   '&currency=' + model.currency.currency
                 else:
                     flights_url = 'https://api.sandbox.amadeus.com/v1.2/flights/affiliate-search?apikey=rWjxYGjkHiSxAwDXK0LF1a5LNmtAYZ2z&origin=' + departure_city_code + \
@@ -98,13 +100,13 @@ class QueryFormView(View):
 
 
 def syntax_error_message(error):
-    if error.startswith("Expected '.*?(?=(^\s*|\s+)(\/\*|'|one-way\s|round-trip\s))'"):
+    if error.startswith("Expected '.*?(?=(^\s*|\s+)(\/\*|'|one-way|round-trip))'"):
         return "You didn't define number of tickets or ticket type (one-way or round-trip)."
-    elif error.startswith("Expected '.*?(?=(^\s*|\s+)(\/\*|'|economy\s|business\s|first\s|second\s|couchette\s))'"):
+    elif error.startswith("Expected '.*?(?=(^\s*|\s+)(\/\*|'|economy|business|first|second|couchette))'"):
         return "You must define ticket class."
-    elif error.startswith("Expected '.*?(?=(^\s*|\s+)(\/\*|'|plane\s|bus\s|train\s))'"):
+    elif error.startswith("Expected '.*?(?=(^\s*|\s+)(\/\*|'|plane|bus|train))'"):
         return "You must define mean of transport (plane, train or bus)."
-    elif error.startswith("Expected '.*?(?=(^\s*|\s+)(\/\*|'|[1-9]\d*\s))'"):
+    elif error.startswith("Expected '.*?(?=(^\s*|\s+)(\/\*|'|[1-9]\d*))'"):
         return "You must define number of tickets."
     elif error.startswith("Expected '.*?(?=(^\s*|\s+)(\/\*|'|from\s))'"):
         return "You must define departure city."
@@ -120,4 +122,3 @@ def syntax_error_message(error):
         return "Date isn't valid. Expected date format is DD.MM.YYYY or DD/MM/YYYY."
     elif error.startswith("Expected '/' or '.'"):
         return "Date isn't valid. Expected date format is DD.MM.YYYY or DD/MM/YYYY."
-

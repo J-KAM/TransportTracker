@@ -8,7 +8,7 @@ class TicketQuery(object):
     def interpret(self, model):
         model.From.departure_city = city_name_processor(model.From.departure_city)
         model.From.arrival_city = city_name_processor(model.to.arrival_city)
-        ticket_class_processor(model.transport_type.transport, model.ticket_class.Class)
+        ticket_class_processor(model.transport_type.transport, model.ticket_class)
         cities_processor(model.From.departure_city, model.to.arrival_city)
         model.on.departure_date = date_format_processor(model.on.departure_date)
         round_trip_processor(model.ticket_type.type, model.return_date)
@@ -23,10 +23,14 @@ def city_name_processor(city):
 
 
 def ticket_class_processor(transport_type, ticket_class):
-    if transport_type == 'plane' and ticket_class != 'economy' and ticket_class != 'business':
-        raise TextXSemanticError('Plane ticket class must be economy or business.')
-    elif transport_type == 'train' and ticket_class != 'first' and ticket_class != 'second' and ticket_class != 'couchette':
-        raise TextXSemanticError('Train ticket class must be first, second or couchette.')
+    if transport_type != 'bus':
+        if ticket_class is None:
+            raise TextXSemanticError('Ticket class must be defined.')
+        else:
+            if transport_type == 'plane' and ticket_class.Class != 'economy' and ticket_class.Class != 'business':
+                raise TextXSemanticError('Plane ticket class must be economy or business.')
+            elif transport_type == 'train' and ticket_class.Class != 'first' and ticket_class.Class != 'second' and ticket_class.Class != 'couchette':
+                raise TextXSemanticError('Train ticket class must be first, second or couchette.')
 
 
 def cities_processor(departure_city, arrival_city):

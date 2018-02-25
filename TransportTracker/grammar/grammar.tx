@@ -1,7 +1,7 @@
 Ticket_query[noskipws]:
     number_of_tickets = Number_of_tickets
     ticket_type = Ticket_type
-    ticket_class = Ticket_class
+    (ticket_class = Ticket_class)?
     transport_type = Transport_type
     (From=From to=To | to=To From=From)
     on=On
@@ -12,25 +12,25 @@ Ticket_query[noskipws]:
 ;
 
 Number_of_tickets:
-    /.*?(?=(^\s*|\s+)(\/\*|'|[1-9]\d*\s))/
+    /.*?(?=(^\s*|\s+)(\/\*|'|[1-9]\d*))/
     /\s*/
     number = Positive_number
 ;
 
 Ticket_type:
-    /.*?(?=(^\s*|\s+)(\/\*|'|one-way\s|round-trip\s))/
+    /.*?(?=(^\s*|\s+)(\/\*|'|one-way|round-trip))/
     /\s*/
     type = Ticket_type_value
 ;
 
 Ticket_class:
-    /.*?(?=(^\s*|\s+)(\/\*|'|economy\s|business\s|first\s|second\s|couchette\s))/
+    /.*?(?=(^\s*|\s+)(\/\*|'|economy|business|first|second|couchette))/
     /\s*/
     Class = Ticket_class_value
 ;
 
 Transport_type:
-    /.*?(?=(^\s*|\s+)(\/\*|'|plane\s|bus\s|train\s))/
+    /.*?(?=(^\s*|\s+)(\/\*|'|plane|bus|train))/
     /\s*/
     transport = Means_of_transport
 ;
