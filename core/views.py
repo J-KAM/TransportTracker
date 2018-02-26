@@ -36,55 +36,18 @@ class QueryFormView(View):
             model = execute_for_web(os.path.join(path, "grammar"), 'grammar.tx', query, True, True)
             query = TicketQuery()
             query.interpret(model)
+            url = ""
 
-            departure_city_code = ""
-            arrival_city_code = ""
+            if model.transport_type.transport == 'plane':
+                url = create_flight_url(model)
 
-            if City.objects.filter(name=model.From.departure_city).exists():
-                departure_city_code = City.objects.get(name=model.From.departure_city).iata_code
-            if City.objects.filter(name=model.to.arrival_city).exists():
-                arrival_city_code = City.objects.get(name=model.to.arrival_city).iata_code
-
-            flights_url = ""
-
-            if model.ticket_type.type == 'round-trip':
-                if model.price is not None:
-                    total_price = int(model.number_of_tickets.number) * int(model.price.price)
-                    flights_url = 'https://api.sandbox.amadeus.com/v1.2/flights/affiliate-search?apikey=rWjxYGjkHiSxAwDXK0LF1a5LNmtAYZ2z&origin=' + departure_city_code + \
-                                  '&destination=' + arrival_city_code + \
-                                  '&departure_date=' + model.on.departure_date + \
-                                  '&return_date=' + model.return_date.return_date + \
-                                  '&adults=' + model.number_of_tickets.number +\
-                                  '&max_price=' + str(total_price) + \
-                                  '&currency=' + model.currency.currency
-                else:
-                    flights_url = 'https://api.sandbox.amadeus.com/v1.2/flights/affiliate-search?apikey=rWjxYGjkHiSxAwDXK0LF1a5LNmtAYZ2z&origin=' + departure_city_code + \
-                                  '&destination=' + arrival_city_code + \
-                                  '&departure_date=' + model.on.departure_date + \
-                                  '&return_date=' + model.return_date.return_date + \
-                                  '&adults=' + model.number_of_tickets.number
-            else:
-                if model.price is not None:
-                    total_price = int( model.number_of_tickets.number) * int(model.price.price)
-                    flights_url = 'https://api.sandbox.amadeus.com/v1.2/flights/affiliate-search?apikey=rWjxYGjkHiSxAwDXK0LF1a5LNmtAYZ2z&origin=' + departure_city_code + \
-                                  '&destination=' + arrival_city_code + \
-                                  '&departure_date=' + model.on.departure_date + \
-                                  '&adults=' + model.number_of_tickets.number +\
-                                  '&max_price=' + str(total_price) + \
-                                  '&currency=' + model.currency.currency
-                else:
-                    flights_url = 'https://api.sandbox.amadeus.com/v1.2/flights/affiliate-search?apikey=rWjxYGjkHiSxAwDXK0LF1a5LNmtAYZ2z&origin=' + departure_city_code + \
-                                  '&destination=' + arrival_city_code + \
-                                  '&departure_date=' + model.on.departure_date + \
-                                  '&adults=' + model.number_of_tickets.number
-
-            if flights_url != "":
-                flights_response = requests.get(flights_url).json()
-                filtered_flights = []
-                if 'results' in flights_response:
-                    for flight in flights_response['results']:
-                        if model.ticket_class.Class in flight['travel_class'].lower():
-                            filtered_flights.append(flight)
+                if url != "":
+                    flights_response = requests.get(url).json()
+                    filtered_flights = []
+                    if 'results' in flights_response:
+                        for flight in flights_response['results']:
+                            if model.ticket_class.Class in flight['travel_class'].lower():
+                                filtered_flights.append(flight)
 
         except TextXSyntaxError as error:
             return render(request, self.template_name, {'form': form, 'error_message': syntax_error_message(str(error))})
@@ -122,3 +85,45 @@ def syntax_error_message(error):
         return "Date isn't valid. Expected date format is DD.MM.YYYY or DD/MM/YYYY."
 
 
+def create_flight_url(model):
+    departure_city_code = ""
+    arrival_city_code = ""
+
+    if City.objects.filter(name=model.From.departure_city).exists():
+        departure_city_code = City.objects.get(name=model.From.departure_city).iata_code
+    if City.objects.filter(name=model.to.arrival_city).exists():
+        arrival_city_code = City.objects.get(name=model.to.arrival_city).iata_code
+
+    flights_url = ""
+
+    if model.ticket_type.type == 'round-trip':
+        if model.price is not None:
+            total_price = int(model.number_of_tickets.number) * int(model.price.price)
+            flights_url = 'https://api.sandbox.amadeus.com/v1.2/flights/affiliate-search?apikey=rWjxYGjkHiSxAwDXK0LF1a5LNmtAYZ2z&origin=' + departure_city_code + \
+                          '&destination=' + arrival_city_code + \
+                          '&departure_date=' + model.on.departure_date + \
+                          '&return_date=' + model.return_date.return_date + \
+                          '&adults=' + model.number_of_tickets.number + \
+                          '&max_price=' + str(total_price) + \
+                          '&currency=' + model.currency.currency
+        else:
+            flights_url = 'https://api.sandbox.amadeus.com/v1.2/flights/affiliate-search?apikey=rWjxYGjkHiSxAwDXK0LF1a5LNmtAYZ2z&origin=' + departure_city_code + \
+                          '&destination=' + arrival_city_code + \
+                          '&departure_date=' + model.on.departure_date + \
+                          '&return_date=' + model.return_date.return_date + \
+                          '&adults=' + model.number_of_tickets.number
+    else:
+        if model.price is not None:
+            total_price = int(model.number_of_tickets.number) * int(model.price.price)
+            flights_url = 'https://api.sandbox.amadeus.com/v1.2/flights/affiliate-search?apikey=rWjxYGjkHiSxAwDXK0LF1a5LNmtAYZ2z&origin=' + departure_city_code + \
+                          '&destination=' + arrival_city_code + \
+                          '&departure_date=' + model.on.departure_date + \
+                          '&adults=' + model.number_of_tickets.number + \
+                          '&max_price=' + str(total_price) + \
+                          '&currency=' + model.currency.currency
+        else:
+            flights_url = 'https://api.sandbox.amadeus.com/v1.2/flights/affiliate-search?apikey=rWjxYGjkHiSxAwDXK0LF1a5LNmtAYZ2z&origin=' + departure_city_code + \
+                          '&destination=' + arrival_city_code + \
+                          '&departure_date=' + model.on.departure_date + \
+                          '&adults=' + model.number_of_tickets.number
+    return flights_url
