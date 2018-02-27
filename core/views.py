@@ -49,15 +49,34 @@ class QueryFormView(View):
                             if model.ticket_class.Class in flight['travel_class'].lower():
                                 filtered_flights.append(flight)
 
+                return render(request, 'core/flight_results.html', {"from": model.From.departure_city.capitalize(),
+                                                                    "to": model.to.arrival_city.capitalize(),
+                                                                    "filtered_flights": filtered_flights})
+
+            elif model.transport_type.transport == 'train':
+                url = create_train_url(model)
+                filtered_trains = []
+                if url != "":
+                    trains_response = requests.get(url).json()
+                    if 'results' in trains_response:
+                        for train in trains_response['results']:
+                            if model.ticket_class.Class in train['itineraries']['trains']['prices']['service_class'].lower():
+                                if model.price is not None:
+                                    if model.price.price <= train['itineraries']['trains']['prices']['total_price'].amount and model.price.currency == train['itineraries']['trains']['prices']['total_price'].currency.lower():
+                                        filtered_trains.append(train)
+                                else:
+                                    filtered_trains.append(train)
+
+                return render(request, 'core/train_results.html', {"from": model.From.departure_city.capitalize(),
+                                                                   "to": model.to.arrival_city.capitalize(),
+                                                                   "filtered_trains": filtered_trains})
+            elif model.transport_type.transport == 'bus':
+                return render(request, 'core/bus_results.html')
+
         except TextXSyntaxError as error:
             return render(request, self.template_name, {'form': form, 'error_message': syntax_error_message(str(error))})
         except TextXSemanticError as error:
             return render(request, self.template_name, {'form': form, 'error_message': error})
-
-        return render(request, 'core/flight_results.html', {"from": model.From.departure_city.capitalize(),
-                                                            "to": model.to.arrival_city.capitalize(),
-                                                            "mot": model.transport_type.transport,
-                                                            "filtered_flights": filtered_flights})
 
 
 def syntax_error_message(error):
@@ -127,3 +146,34 @@ def create_flight_url(model):
                           '&departure_date=' + model.on.departure_date + \
                           '&adults=' + model.number_of_tickets.number
     return flights_url
+
+
+def create_train_url(model):
+    departure_city = model.From.departure_city
+    arrival_city = model.to.arrival_city
+
+    departure_city_url = 'https://api.sandbox.amadeus.com/v1.2/rail-stations/autocomplete?apikey=rWjxYGjkHiSxAwDXK0LF1a5LNmtAYZ2z&term=' + departure_city
+    arrival_city_url = 'https://api.sandbox.amadeus.com/v1.2/rail-stations/autocomplete?apikey=rWjxYGjkHiSxAwDXK0LF1a5LNmtAYZ2z&term=' + arrival_city
+    departure_city_response = requests.get(departure_city_url).json()
+    arrival_city_response = requests.get(arrival_city_url).json()
+
+    if departure_city_response and arrival_city_response:
+        departure_city_code = departure_city_response[0]['value']
+        arrival_city_code = arrival_city_response[0]['value']
+
+        trains_url = 'https://api.sandbox.amadeus.com/v1.2/trains/extensive-search?apikey=rWjxYGjkHiSxAwDXK0LF1a5LNmtAYZ2z&origin=' + departure_city_code + \
+                     '&destination=' + arrival_city_code + \
+                     '&departure_date=' + model.on.departure_date
+
+        if model.ticket_type.type == 'round-trip':
+            return_trains_url = 'https://api.sandbox.amadeus.com/v1.2/trains/extensive-search?apikey=rWjxYGjkHiSxAwDXK0LF1a5LNmtAYZ2z&origin=' + arrival_city_code + \
+                                '&destination=' + departure_city_code + \
+                                '&departure_date=' + model.return_date.return_date
+            return_trains_response = requests.get(return_trains_url).json()
+            if 'results' not in return_trains_response:
+                return ""
+
+    print(departure_city_code)
+    print(arrival_city_code)
+    return trains_url
+
