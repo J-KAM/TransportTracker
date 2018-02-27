@@ -4,8 +4,7 @@
 {% block title %}Flight results{% endblock %}
 
 {% block body %}
-    {% if mot == 'plane' %}
-        <h2>Flights from {{ from }} to {{ to }}</h2>
+    <h2>Flights from {{ from }} to {{ to }}</h2>
 
         {% if filtered_flights %}
             <div class="container">
@@ -46,7 +45,4 @@
             <p class="info">There are no flights that match your query. Please, try again.</p>
         {% endif %}
 
-    {% else %}
-        <p class="info">Searches for bus and train are not currently available.</p>
-    {% endif %}
 {% endblock%}
