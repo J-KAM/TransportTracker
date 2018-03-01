@@ -70,8 +70,6 @@ class QueryFormView(View):
                 return render(request, 'core/train_results.html', {"from": model.From.departure_city.capitalize(),
                                                                    "to": model.to.arrival_city.capitalize(),
                                                                    "filtered_trains": filtered_trains})
-            elif model.transport_type.transport == 'bus':
-                return render(request, 'core/bus_results.html')
 
         except TextXSyntaxError as error:
             return render(request, self.template_name, {'form': form, 'error_message': syntax_error_message(str(error))})
@@ -173,7 +171,8 @@ def create_train_url(model):
             if 'results' not in return_trains_response:
                 return ""
 
-    print(departure_city_code)
-    print(arrival_city_code)
-    return trains_url
+        print(departure_city_code)
+        print(arrival_city_code)
+        return trains_url
+    return ""
 

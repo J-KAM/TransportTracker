@@ -1,0 +1,47 @@
+{% extends "core/base.html" %}
+{% load train_filters %}
+
+{% block title %}Train results{% endblock %}
+
+{% block body %}
+    <h2>Trains from {{ from }} to {{ to }}</h2>
+
+        {% if filtered_trains %}
+            <div class="container">
+                <table class="table table-hover">
+                    <thead>
+                        <tr class="tr-heading">
+                            <th>Operating company</th>
+                            <th>Train number</th>
+                            <th>Ticket class</th>
+                            <th>Price per person</th>
+                            <th>Departure time</th>
+                            <th>Departure station</th>
+                            <th>Arrival time</th>
+                            <th>Arrival station</th>
+                            <th> &nbsp;</th>
+                        </tr>
+                </thead>
+            <tbody>
+                {% for train in filtered_trains %}
+                    <tr>
+                        <td>{{ train.itineraries.trains.operating_company }}</td>
+                        <td>{{ train.itineraries.trains.train_number }}</td>
+                        <td>{{ train.itineraries.trains.prices.service_class }}</td>
+                        <td>{{ train.itineraries.trains.prices.total_price.amount }} {{ train.itineraries.trains.prices.total_price.currency }}</td>
+                        <td>{{ train.itineraries.trains.departs_at | time_filter }}</td>
+                        <td>{{ train.itineraries.trains.departure_station.station_name }}</td>
+                        <td>{{ train.itineraries.trains.arrives_at | time_filter }}</td>
+                        <td>{{ train.itineraries.trains.arrival_station.station_name }}</td>
+                        <td><a href="http://www.sncf.com/"> Book </a></td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+    {% else %}
+        <p class="info">There are no trains that match your query. Please, try again.</p>
+    {% endif %}
+
+{% endblock%}
