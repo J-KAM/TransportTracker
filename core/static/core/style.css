@@ -56,4 +56,10 @@ b {
     font-family: 'Pacifico', cursive;
 }
 
+textarea, .my-btn {
+    width: 100%;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    display: block;
+}
 
