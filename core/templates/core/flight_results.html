@@ -27,8 +27,8 @@
                     <tr>
                         <td>{{ flight.airline }}</td>
                         <td>{{ flight.travel_class.lower }}</td>
-                        <td>{{ flight.fare.price_per_adult.total_fare }} {{ flightfare.currency }}</td>
-                        <td>{{ flight.fare.total_price }} {{ flightfare.currency }}</td>
+                        <td>{{ flight.fare.price_per_adult.total_fare }} {{ flight.fare.currency }}</td>
+                        <td>{{ flight.fare.total_price }} {{ flight.fare.currency }}</td>
                         <td>{{ flight.outbound.flights | flight_type }}</td>
                         <td>{{ flight.outbound.flights | departure }}</td>
                         <td>{{ flight.outbound.flights | arrival }}</td>

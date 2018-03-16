@@ -118,7 +118,7 @@ def create_flight_url(model):
     if model.ticket_type.type == 'round-trip':
         if model.price is not None:
             total_price = int(model.number_of_tickets.number) * int(model.price.price)
-            flights_url = 'https://api.sandbox.amadeus.com/v1.2/flights/affiliate-search?apikey=rWjxYGjkHiSxAwDXK0LF1a5LNmtAYZ2z&origin=' + departure_city_code + \
+            flights_url = 'https://api.sandbox.amadeus.com/v1.2/flights/affiliate-search?apikey=KKhGXAu6ANW9F3cHgBzkurG3ORgA1Bk4&origin=' + departure_city_code + \
                           '&destination=' + arrival_city_code + \
                           '&departure_date=' + model.on.departure_date + \
                           '&return_date=' + model.return_date.return_date + \
@@ -126,7 +126,7 @@ def create_flight_url(model):
                           '&max_price=' + str(total_price) + \
                           '&currency=' + model.currency.currency
         else:
-            flights_url = 'https://api.sandbox.amadeus.com/v1.2/flights/affiliate-search?apikey=rWjxYGjkHiSxAwDXK0LF1a5LNmtAYZ2z&origin=' + departure_city_code + \
+            flights_url = 'https://api.sandbox.amadeus.com/v1.2/flights/affiliate-search?apikey=KKhGXAu6ANW9F3cHgBzkurG3ORgA1Bk4&origin=' + departure_city_code + \
                           '&destination=' + arrival_city_code + \
                           '&departure_date=' + model.on.departure_date + \
                           '&return_date=' + model.return_date.return_date + \
@@ -134,14 +134,14 @@ def create_flight_url(model):
     else:
         if model.price is not None:
             total_price = int(model.number_of_tickets.number) * int(model.price.price)
-            flights_url = 'https://api.sandbox.amadeus.com/v1.2/flights/affiliate-search?apikey=rWjxYGjkHiSxAwDXK0LF1a5LNmtAYZ2z&origin=' + departure_city_code + \
+            flights_url = 'https://api.sandbox.amadeus.com/v1.2/flights/affiliate-search?apikey=KKhGXAu6ANW9F3cHgBzkurG3ORgA1Bk4&origin=' + departure_city_code + \
                           '&destination=' + arrival_city_code + \
                           '&departure_date=' + model.on.departure_date + \
                           '&adults=' + model.number_of_tickets.number + \
                           '&max_price=' + str(total_price) + \
                           '&currency=' + model.currency.currency
         else:
-            flights_url = 'https://api.sandbox.amadeus.com/v1.2/flights/affiliate-search?apikey=rWjxYGjkHiSxAwDXK0LF1a5LNmtAYZ2z&origin=' + departure_city_code + \
+            flights_url = 'https://api.sandbox.amadeus.com/v1.2/flights/affiliate-search?apikey=KKhGXAu6ANW9F3cHgBzkurG3ORgA1Bk4&origin=' + departure_city_code + \
                           '&destination=' + arrival_city_code + \
                           '&departure_date=' + model.on.departure_date + \
                           '&adults=' + model.number_of_tickets.number
@@ -152,8 +152,8 @@ def create_train_url(model):
     departure_city = model.From.departure_city
     arrival_city = model.to.arrival_city
 
-    departure_city_url = 'https://api.sandbox.amadeus.com/v1.2/rail-stations/autocomplete?apikey=rWjxYGjkHiSxAwDXK0LF1a5LNmtAYZ2z&term=' + departure_city
-    arrival_city_url = 'https://api.sandbox.amadeus.com/v1.2/rail-stations/autocomplete?apikey=rWjxYGjkHiSxAwDXK0LF1a5LNmtAYZ2z&term=' + arrival_city
+    departure_city_url = 'https://api.sandbox.amadeus.com/v1.2/rail-stations/autocomplete?apikey=KKhGXAu6ANW9F3cHgBzkurG3ORgA1Bk4&term=' + departure_city
+    arrival_city_url = 'https://api.sandbox.amadeus.com/v1.2/rail-stations/autocomplete?apikey=KKhGXAu6ANW9F3cHgBzkurG3ORgA1Bk4&term=' + arrival_city
     departure_city_response = requests.get(departure_city_url).json()
     arrival_city_response = requests.get(arrival_city_url).json()
 
@@ -161,12 +161,12 @@ def create_train_url(model):
         departure_city_code = departure_city_response[0]['value']
         arrival_city_code = arrival_city_response[0]['value']
 
-        trains_url = 'https://api.sandbox.amadeus.com/v1.2/trains/extensive-search?apikey=rWjxYGjkHiSxAwDXK0LF1a5LNmtAYZ2z&origin=' + departure_city_code + \
+        trains_url = 'https://api.sandbox.amadeus.com/v1.2/trains/extensive-search?apikey=KKhGXAu6ANW9F3cHgBzkurG3ORgA1Bk4&origin=' + departure_city_code + \
                      '&destination=' + arrival_city_code + \
                      '&departure_date=' + model.on.departure_date
 
         if model.ticket_type.type == 'round-trip':
-            return_trains_url = 'https://api.sandbox.amadeus.com/v1.2/trains/extensive-search?apikey=rWjxYGjkHiSxAwDXK0LF1a5LNmtAYZ2z&origin=' + arrival_city_code + \
+            return_trains_url = 'https://api.sandbox.amadeus.com/v1.2/trains/extensive-search?apikey=KKhGXAu6ANW9F3cHgBzkurG3ORgA1Bk4&origin=' + arrival_city_code + \
                                 '&destination=' + departure_city_code + \
                                 '&departure_date=' + model.return_date.return_date
             return_trains_response = requests.get(return_trains_url).json()
